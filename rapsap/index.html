@@ -28,7 +28,6 @@
       </nav>
 
       <main class="content">
-        <canvas id="rive-canvas" width="900" height="900"></canvas>
         <p class="title">Essentials delivered,</p>
 
         <p
@@ -49,37 +48,18 @@
         <button class="cta">launching soon</button>
       </main>
     </div>
-    <div class="custom-cursor"></div>
 
-    <canvas id="rive-canvas" width="900" height="900"></canvas>
+    <canvas id="rive-canvas" width="1000" height="1000"></canvas>
     <script src="https://unpkg.com/@rive-app/canvas"></script>
     <script>
-      new rive.Rive({
-        src: "/Website.riv",
-        canvas: document.getElementById("rive-canvas"),
+      let canvas = document.getElementById("rive-canvas");
+      const isMobile = window.innerWidth <= 768;
+
+      const riveInstance = new rive.Rive({
+        src: window.innerWidth <= 768 ? "/Mobile.riv" : "/Website.riv",
+        canvas: canvas,
         autoplay: true,
         fit: rive.Fit.Cover,
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const cursor = document.querySelector(".custom-cursor");
-
-        document.addEventListener("mousemove", (e) => {
-          cursor.style.left = `${e.clientX}px`;
-          cursor.style.top = `${e.clientY}px`;
-        });
-
-        // Enlarge cursor on hover over clickable elements
-        document.querySelectorAll("a, button").forEach((el) => {
-          el.addEventListener("mouseenter", () => {
-            cursor.style.transform = "scale(1.5)";
-          });
-          el.addEventListener("mouseleave", () => {
-            cursor.style.transform = "scale(1)";
-          });
-        });
       });
     </script>
 
