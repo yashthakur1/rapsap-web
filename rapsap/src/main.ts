@@ -1,5 +1,4 @@
 import './style.css';
-import { setupCounter } from './counter.ts';
 import 'animate.css';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -8,6 +7,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </nav>
 
       <main class="content">
+      <canvas id="rive-canvas" width="900" height="900"></canvas>
         <p class="title">Essentials delivered,</p>
 
         <p class="animate__animated animate__lightSpeedInLeft animate__faster brand-name">rapsap.</p>
@@ -21,11 +21,17 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <span>Smooth</span> ordering <span>Fast</span> delivery.
         </p>
 
-        <button class="cta">Order Now</button>
+        <button class="cta">launching soon</button>
+
       </main>
+
+      
+      
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+
+
 // <div class="nav-items">
 //           <ul>
 //             <li>About</li>

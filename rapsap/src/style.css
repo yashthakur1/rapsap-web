@@ -1,10 +1,12 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+
 :root {
   font-family: DM Sans;
 
   line-height: 1.5;
 
   color-scheme: light dark;
-  background-color: #242424;
+  background-color: black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,6 +25,10 @@ a:hover {
 
 body {
   margin: 0;
+  height: 100vh;
+  background-image: url("../public/bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
   /* display: flex;
   place-items: center;
   min-width: 320px; */
@@ -159,7 +165,6 @@ p {
   max-width: 35%;
   margin: 32px 0px 48px -114px;
   padding-left: 114px;
-
   font-weight: 500;
   font-size: 24px;
   line-height: 100%;
@@ -175,7 +180,6 @@ p {
 .cta {
   background-color: #5074f3;
   color: #ffffff;
-
   font-weight: 800;
   font-size: 24px;
   line-height: 100%;
@@ -184,6 +188,45 @@ p {
   vertical-align: middle;
   border-radius: 4px;
   padding: 14.5px 57px 14.5px 57px;
+}
+
+#rive-canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* width: 100vw; */
+  height: 100vh;
+}
+
+/* Hide the default cursor */
+body {
+  cursor: none;
+}
+
+/* Custom cursor container */
+.custom-cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-color: #c1ff45; /* Red with transparency */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 9999;
+}
+
+/* Inner dot */
+.custom-cursor::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: black;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 768px) {
