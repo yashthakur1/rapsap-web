@@ -276,4 +276,8 @@ p {
     text-align: center;
     padding: 4px 15px;
   }
+
+  body {
+    background-image: url("/mob_bg.webp");
+  }
 }
