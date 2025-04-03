@@ -107,7 +107,7 @@
           <div class="store-image second">
             <p class="store-title-name">Downtown - Lodha</p>
             <p class="store-address">
-              Units 3,4 &5, Casa Urbano, sector 4 Downtown palava City, phase
+              Units 3,4 & 5, Casa Urbano, sector 4 Downtown palava City, phase
               II, Dombivli, Maharashtra 421201.<br />
               Contact No : 9594594677
             </p>
@@ -164,6 +164,32 @@
       </footer>
     </div>
     <script src="https://unpkg.com/@rive-app/canvas"></script>
-    <script src="/script.js"></script>
+    <script>
+      const currentPage = window.location.pathname;
+
+      const aboutLink = document.getElementById("about-link");
+      const franchiseLink = document.getElementById("franchise-link");
+      const storeLink = document.getElementById("store-link");
+
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const navMenu = document.getElementById("nav-menu");
+
+      if (franchiseLink && currentPage === "/franchise.html") {
+        franchiseLink.classList.add("active");
+      }
+      if (aboutLink && currentPage === "/about.html") {
+        aboutLink.classList.add("active");
+      }
+
+      if (storeLink && currentPage === "/stores.html") {
+        storeLink.classList.add("active");
+      }
+
+      if (hamburgerBtn) {
+        hamburgerBtn.addEventListener("click", function () {
+          if (navMenu) navMenu.classList.toggle("show");
+        });
+      }
+    </script>
   </body>
 </html>
