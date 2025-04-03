@@ -58,7 +58,19 @@
   <body>
     <div id="app">
       <nav class="navbar">
-        <img src="/logo.svg" />
+        <a href="/">
+          <img src="/logo.svg" class="logo-nav" />
+        </a>
+
+        <img class="hamburger" id="hamburger-btn" src="/hamburgerMenu.svg" />
+
+        <div class="nav-items" id="nav-menu">
+          <ul>
+            <li><a href="/about.html" id="about-link">About</a></li>
+            <li><a href="/franchise.html" id="franchise-link">Franchise</a></li>
+            <li><a href="/stores.html" id="store-link">Stores</a></li>
+          </ul>
+        </div>
       </nav>
 
       <main class="content">
@@ -71,55 +83,20 @@
         </p>
 
         <p class="description">
-          Helping you discover recipes, order fresh ingredients<br />
-          instantly and get them delivered in no time.
+          Experience the store or get it at your door. Simple
         </p>
 
         <p class="highlight">
-          <span>Smooth</span> ordering <span>Fast</span> delivery.
+          <span>Smooth</span> ordering, <span>Fast</span> delivery.
         </p>
 
-        <button id="cta" class="cta">Order Now</button>
-        <div id="popup">
-          <div class="popup-content">
-            <p class="launch-title">LAUNCHING SOON!</p>
-            <button id="popup-close" class="popup cta">Okay</button>
-          </div>
-          <!-- <button class="close-btn">
-            <svg
-              width="64px"
-              height="64px"
-              viewBox="-2.4 -2.4 28.80 28.80"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              stroke-width="0.00024000000000000003"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke="#CCCCCC"
-                stroke-width="0.9120000000000001"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  opacity="0.5"
-                  d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22Z"
-                  fill="#5074F3"
-                ></path>
-                <path
-                  d="M8.96967 8.96967C9.26256 8.67678 9.73744 8.67678 10.0303 8.96967L12 10.9394L13.9697 8.96969C14.2626 8.6768 14.7374 8.6768 15.0303 8.96969C15.3232 9.26258 15.3232 9.73746 15.0303 10.0303L13.0607 12L15.0303 13.9697C15.3232 14.2625 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2625 15.3232 13.9696 15.0303L12 13.0607L10.0304 15.0303C9.73746 15.3232 9.26258 15.3232 8.96969 15.0303C8.6768 14.7374 8.6768 14.2626 8.96969 13.9697L10.9394 12L8.96967 10.0303C8.67678 9.73744 8.67678 9.26256 8.96967 8.96967Z"
-                  fill="#5074F3"
-                ></path>
-              </g>
-            </svg>
-          </button> -->
-        </div>
+        <!-- <button id="cta" class="cta shimmer">LAUNCHING SOON!</button> -->
+        <p class="launch-title shimmer">Launching Soon!</p>
       </main>
     </div>
 
-    <canvas id="rive-canvas" width="1000" height="1000"></canvas>
+    <canvas id="rive-canvas" width="900" height="900"></canvas>
+
     <script src="https://unpkg.com/@rive-app/canvas"></script>
     <script>
       let canvas = document.getElementById("rive-canvas");
@@ -135,18 +112,31 @@
         autoplay: true,
       });
 
-      ctaBtn.addEventListener("click", () => {
-        popup.style.display = "block";
-        popup.style.margin = "auto";
-        popup.style.width = isMobile ? "90vw" : "50vw";
-        popup.style.zIndex = "1";
-        popup.style.borderRadius = "4px";
-      });
-      close.addEventListener("click", () => {
-        popup.style.display = "none";
-      });
-    </script>
+      const currentPage = window.location.pathname;
 
-    <!-- <script type="module" src="/src/main.ts"></script> -->
+      const aboutLink = document.getElementById("about-link");
+      const franchiseLink = document.getElementById("franchise-link");
+      const storeLink = document.getElementById("store-link");
+
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const navMenu = document.getElementById("nav-menu");
+
+      if (franchiseLink && currentPage === "/franchise.html") {
+        franchiseLink.classList.add("active");
+      }
+      if (aboutLink && currentPage === "/about.html") {
+        aboutLink.classList.add("active");
+      }
+
+      if (storeLink && currentPage === "/stores.html") {
+        storeLink.classList.add("active");
+      }
+
+      if (hamburgerBtn) {
+        hamburgerBtn.addEventListener("click", function () {
+          if (navMenu) navMenu.classList.toggle("show");
+        });
+      }
+    </script>
   </body>
 </html>
