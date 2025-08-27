@@ -167,8 +167,10 @@
         </div>
       </footer>
     </div>
-    <script src="https://unpkg.com/@rive-app/canvas"></script>
+    <canvas id="rive-canvas" width="900" height="900"></canvas>
+    <script src="https://unpkg.com/@rive-app/canvas@2.21.0"></script>
     <script>
+      let canvas = document.getElementById("rive-canvas");
       const currentPage = window.location.pathname;
 
       const aboutLink = document.getElementById("about-link");
@@ -194,6 +196,33 @@
           if (navMenu) navMenu.classList.toggle("show");
         });
       }
+
+      // Load Rive with explicit fetch to ensure proper loading
+      const riveFile = window.innerWidth <= 768 ? "/Mobile.riv" : "/Website.riv";
+      
+      fetch(riveFile)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Failed to load Rive file');
+          }
+          return response.arrayBuffer();
+        })
+        .then(buffer => {
+          const riveInstance = new rive.Rive({
+            buffer: buffer,
+            canvas: canvas,
+            autoplay: true,
+            onLoad: () => {
+              console.log('Rive animation loaded successfully');
+              riveInstance.play();
+            }
+          });
+        })
+        .catch(error => {
+          console.error('Error loading Rive animation:', error);
+          // Fallback - hide the canvas if Rive fails to load
+          canvas.style.display = 'none';
+        });
     </script>
   </body>
 </html>
