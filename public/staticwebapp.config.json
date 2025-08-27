@@ -1,3 +1,19 @@
 {
-  "trailingSlash": "auto"
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "*.{css,scss,js,png,gif,ico,jpg,svg,woff,woff2,ttf,eot,webp,riv}",
+      "/assets/*",
+      "/fonts/*"
+    ]
+  },
+  "mimeTypes": {
+    ".svg": "image/svg+xml",
+    ".webp": "image/webp",
+    ".woff": "font/woff",
+    ".woff2": "font/woff2",
+    ".ttf": "font/ttf",
+    ".eot": "application/vnd.ms-fontobject",
+    ".riv": "application/octet-stream"
+  }
 }
