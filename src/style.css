@@ -1644,7 +1644,8 @@ p {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 60px;
-  align-items: flex-start;
+  align-items: start;
+  text-align: left;
 }
 
 .footer-brand {
@@ -1660,6 +1661,7 @@ p {
   -webkit-text-fill-color: transparent;
   animation: shimmerFooter 3s ease-in-out infinite;
   line-height: 1.2;
+  text-align: left;
 }
 
 @keyframes shimmerFooter {
@@ -1670,8 +1672,9 @@ p {
 .footer-brand p {
   color: #999;
   line-height: 1.6;
-  max-width: 300px;
+  max-width: 350px;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .footer-section {
@@ -1704,6 +1707,7 @@ p {
   position: relative;
   padding-bottom: 10px;
   line-height: 1.2;
+  text-align: left;
 }
 
 .footer-section h4::after {
@@ -1725,6 +1729,7 @@ p {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 
 .footer-links li {
