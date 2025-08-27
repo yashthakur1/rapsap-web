@@ -1644,7 +1644,7 @@ p {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 60px;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .footer-brand {
@@ -1654,11 +1654,12 @@ p {
 .footer-brand h3 {
   font-family: "Tanker", sans-serif;
   font-size: 36px;
-  margin-bottom: 15px;
+  margin: 0 0 15px 0;
   background: linear-gradient(135deg, #fff 0%, #888 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmerFooter 3s ease-in-out infinite;
+  line-height: 1.2;
 }
 
 @keyframes shimmerFooter {
@@ -1699,9 +1700,10 @@ p {
 .footer-section h4 {
   color: #fff;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   position: relative;
   padding-bottom: 10px;
+  line-height: 1.2;
 }
 
 .footer-section h4::after {
@@ -1779,6 +1781,10 @@ p {
 
 .footer-contact {
   margin-top: 20px;
+}
+
+.footer-contact p {
+  margin: 0;
 }
 
 .footer-contact a {
