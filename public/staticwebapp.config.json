@@ -1,19 +1,12 @@
 {
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": ["/images/*.{png,jpg,jpeg,gif,webp,svg}", "/css/*", "/js/*", "/fonts/*", "*.{css,js,json,svg,ico,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot}"]
-  },
+  "trailingSlash": "auto",
   "routes": [
-    {
-      "route": "/",
-      "rewrite": "/index.html"
-    },
     {
       "route": "/about",
       "rewrite": "/about.html"
     },
     {
-      "route": "/franchise",
+      "route": "/franchise", 
       "rewrite": "/franchise.html"
     },
     {
@@ -35,14 +28,42 @@
     {
       "route": "/refund-policy",
       "rewrite": "/refund-policy.html"
+    },
+    {
+      "route": "/*.svg",
+      "headers": {
+        "Cache-Control": "public, max-age=604800",
+        "Content-Type": "image/svg+xml"
+      }
+    },
+    {
+      "route": "/*.webp",
+      "headers": {
+        "Cache-Control": "public, max-age=604800",
+        "Content-Type": "image/webp"
+      }
+    },
+    {
+      "route": "/*.riv",
+      "headers": {
+        "Cache-Control": "public, max-age=604800",
+        "Content-Type": "application/octet-stream"
+      }
+    },
+    {
+      "route": "/fonts/*",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000"
+      }
+    },
+    {
+      "route": "/assets/*",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000"
+      }
     }
   ],
-  "responseOverrides": {
-    "404": {
-      "rewrite": "/index.html",
-      "statusCode": 200
-    }
-  },
+  "responseOverrides": {},
   "mimeTypes": {
     ".json": "application/json",
     ".svg": "image/svg+xml",
@@ -51,9 +72,9 @@
     ".ttf": "font/ttf",
     ".eot": "application/vnd.ms-fontobject",
     ".webp": "image/webp",
-    ".riv": "application/octet-stream"
-  },
-  "globalHeaders": {
-    "Cache-Control": "public, max-age=31536000, immutable"
+    ".riv": "application/octet-stream",
+    ".js": "text/javascript",
+    ".css": "text/css",
+    ".html": "text/html"
   }
 }

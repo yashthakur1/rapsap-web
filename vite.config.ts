@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  base: '/',
   publicDir: 'public',
   build: {
     rollupOptions: {
@@ -16,7 +17,8 @@ export default defineConfig({
         refund: resolve(__dirname, 'refund-policy.html')
       }
     },
-    // Copy staticwebapp.config.json to dist
-    copyPublicDir: true
+    // Copy public assets to dist
+    copyPublicDir: true,
+    assetsDir: 'assets'
   }
 });
