@@ -1,15 +1,22 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
+  publicDir: 'public',
   build: {
     rollupOptions: {
       input: {
-        main: 'index.html', 
-        about: 'about.html', 
-        franchise: 'franchise.html', 
-        stores: 'stores.html', 
-       
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about.html'),
+        franchise: resolve(__dirname, 'franchise.html'),
+        stores: resolve(__dirname, 'stores.html'),
+        privacy: resolve(__dirname, 'privacy-policy.html'),
+        terms: resolve(__dirname, 'terms-conditions.html'),
+        shipping: resolve(__dirname, 'shipping-policy.html'),
+        refund: resolve(__dirname, 'refund-policy.html')
       }
-    }
+    },
+    // Copy staticwebapp.config.json to dist
+    copyPublicDir: true
   }
 });

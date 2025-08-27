@@ -1,0 +1,59 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*.{png,jpg,jpeg,gif,webp,svg}", "/css/*", "/js/*", "/fonts/*", "*.{css,js,json,svg,ico,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot}"]
+  },
+  "routes": [
+    {
+      "route": "/",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/about",
+      "rewrite": "/about.html"
+    },
+    {
+      "route": "/franchise",
+      "rewrite": "/franchise.html"
+    },
+    {
+      "route": "/stores",
+      "rewrite": "/stores.html"
+    },
+    {
+      "route": "/privacy-policy",
+      "rewrite": "/privacy-policy.html"
+    },
+    {
+      "route": "/terms-conditions",
+      "rewrite": "/terms-conditions.html"
+    },
+    {
+      "route": "/shipping-policy",
+      "rewrite": "/shipping-policy.html"
+    },
+    {
+      "route": "/refund-policy",
+      "rewrite": "/refund-policy.html"
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    }
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".svg": "image/svg+xml",
+    ".woff": "font/woff",
+    ".woff2": "font/woff2",
+    ".ttf": "font/ttf",
+    ".eot": "application/vnd.ms-fontobject",
+    ".webp": "image/webp",
+    ".riv": "application/octet-stream"
+  },
+  "globalHeaders": {
+    "Cache-Control": "public, max-age=31536000, immutable"
+  }
+}
