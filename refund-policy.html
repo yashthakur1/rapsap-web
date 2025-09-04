@@ -22,189 +22,174 @@
 
     <title>Refund & Cancellation Policy - Rapsap</title>
     <style>
+      html {
+        background: #000000;
+      }
       body {
-        background-image: url("/bg.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+        background: #000000;
+        color: #ffffff;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
       }
-
-      @media screen and (max-width: 768px) {
-        body {
-          background-image: url("/mob_bg.webp");
-        }
+      #app {
+        min-height: 100vh;
+        background: #000000;
       }
-
       .policy-container {
-        max-width: 1200px;
-        margin: 100px auto 50px;
-        padding: 0 20px;
-        color: #e0e0e0;
-        animation: fadeInUp 0.8s ease-out;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 60px;
+        text-align: left;
+        height: calc(100vh - 160px);
+        overflow-y: auto;
+        overflow-x: hidden;
       }
-
+      .policy-container::-webkit-scrollbar {
+        width: 8px;
+      }
+      .policy-container::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+      }
+      .policy-container::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+      }
+      .policy-container::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
       .policy-header {
         text-align: center;
-        margin-bottom: 50px;
-        padding-bottom: 30px;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       }
-
       .policy-title {
-        font-family: "Tanker", sans-serif;
         font-size: 48px;
-        color: #fff;
+        font-weight: 700;
         margin-bottom: 10px;
-        background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: shimmerText 3s ease-in-out infinite;
+        color: #ffffff;
       }
-
       .effective-date {
-        color: #888;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        color: #999;
+        font-size: 16px;
       }
-
       .policy-section {
-        margin-bottom: 40px;
-        opacity: 0;
-        animation: fadeInUp 0.8s ease-out forwards;
-        animation-delay: 0.2s;
-      }
-
-      .policy-section h2 {
-        color: #fff;
-        font-size: 24px;
-        margin-bottom: 20px;
-        padding-left: 15px;
-        border-left: 3px solid #3b82f6;
-        transition: all 0.3s ease;
-      }
-
-      .policy-section h2:hover {
-        padding-left: 25px;
-        border-left-color: #60a5fa;
-      }
-
-      .policy-section h3 {
-        color: #fff;
-        font-size: 20px;
-        margin: 20px 0 15px 0;
-      }
-
-      .policy-section p,
-      .policy-section li {
+        margin-bottom: 30px;
         line-height: 1.8;
-        color: #d0d0d0;
+      }
+      .policy-section h2 {
+        color: #ffffff;
+        font-size: 24px;
+        margin-bottom: 15px;
+        margin-top: 30px;
+      }
+      .policy-section p {
+        color: #cccccc;
+        font-size: 16px;
         margin-bottom: 15px;
       }
-
       .policy-section ul {
-        list-style: none;
-        padding-left: 20px;
+        color: #cccccc;
+        padding-left: 30px;
+        margin-bottom: 15px;
       }
-
-      .policy-section ul li {
-        position: relative;
-        padding-left: 25px;
-        margin-bottom: 10px;
-        transition: transform 0.3s ease;
+      .policy-section li {
+        margin-bottom: 8px;
       }
-
-      .policy-section ul li:hover {
-        transform: translateX(5px);
+      .policy-section strong {
+        color: #ffffff;
       }
-
-      .policy-section ul li:before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #3b82f6;
-        font-weight: bold;
-      }
-
       .refund-highlight {
-        background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(74, 222, 128, 0.05) 100%);
-        border-left: 4px solid #22c55e;
+        background: rgba(80, 116, 243, 0.1);
         padding: 20px;
-        margin: 20px 0;
         border-radius: 8px;
-        animation: pulse 2s ease-in-out infinite;
+        margin-bottom: 20px;
+        border-left: 4px solid #5074f3;
       }
-
+      .refund-highlight h3 {
+        color: #5074f3;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
       .warning-box {
-        background: linear-gradient(135deg, rgba(251, 146, 60, 0.1) 0%, rgba(254, 215, 170, 0.05) 100%);
-        border-left: 4px solid #fb923c;
-        padding: 20px;
-        margin: 20px 0;
+        background: rgba(255, 193, 7, 0.1);
+        padding: 15px;
         border-radius: 8px;
+        margin: 20px 0;
+        border-left: 4px solid #ffc107;
       }
-
-      @keyframes pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.01); }
+      .warning-box p {
+        margin: 0;
+        color: #ffffff;
       }
-
       .contact-section {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 10px;
-        padding: 30px;
         margin-top: 50px;
-        text-align: center;
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
       }
-
-      .contact-section:hover {
-        background: rgba(255, 255, 255, 0.08);
-        transform: translateY(-2px);
+      .contact-section h2 {
+        color: #ffffff;
+        font-size: 24px;
+        margin-bottom: 15px;
       }
-
+      .contact-section p {
+        color: #cccccc;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
       .contact-section a {
-        color: #60a5fa;
+        color: #5074f3;
         text-decoration: none;
-        transition: color 0.3s ease;
       }
-
       .contact-section a:hover {
-        color: #93c5fd;
+        text-decoration: underline;
       }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      .nav-items ul li a {
+        color: #ffffff;
       }
-
-      @keyframes shimmerText {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.8; }
+      .nav-items ul li a:hover {
+        color: #5074f3;
       }
-
+      .logo-nav {
+        filter: brightness(0) invert(1);
+      }
+      .hamburger {
+        filter: brightness(0) invert(1);
+      }
+      .footer {
+        background: #111111;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 60px;
+      }
+      .footer-logo {
+        filter: brightness(0) invert(1);
+      }
+      .navbar {
+        padding: 20px 60px;
+        position: sticky;
+        top: 0;
+        background: #000000;
+        z-index: 100;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
       @media screen and (max-width: 768px) {
         .policy-container {
-          margin-top: 80px;
-          padding: 0 15px;
+          padding: 30px 30px;
+          height: calc(100vh - 140px);
         }
-
         .policy-title {
           font-size: 32px;
         }
-
         .policy-section h2 {
           font-size: 20px;
         }
-
-        .policy-section h3 {
-          font-size: 18px;
+        .nav-items {
+          background: #111111 !important;
+        }
+        .navbar {
+          padding: 20px 30px;
         }
       }
     </style>
@@ -212,7 +197,7 @@
   <body>
     <nav class="navbar">
       <a href="/">
-        <img src="/logo.svg" class="logo-nav" />
+        <img src="/image-assets/rapsap-logo.svg" class="logo-nav" />
       </a>
 
       <img class="hamburger" id="hamburger-btn" src="/hamburgerMenu.svg" />
@@ -227,10 +212,11 @@
     </nav>
 
     <div class="policy-container">
-      <div class="policy-header">
-        <h1 class="policy-title">Refund and Cancellation Policy</h1>
-        <p class="effective-date">Effective Date: 25th August, 2025</p>
-      </div>
+      <div class="policy-content-wrapper">
+        <div class="policy-header">
+          <h1 class="policy-title">Refund and Cancellation Policy</h1>
+          <p class="effective-date">Effective Date: 25th August, 2025</p>
+        </div>
 
       <div class="policy-section">
         <p>At Rapsap Essential Retail Pvt Ltd, customer satisfaction is our top priority. We understand that there may be situations where you wish to cancel an order or request a refund. This policy outlines the terms and conditions governing order cancellations and refunds.</p>
@@ -311,6 +297,7 @@
         <p>Email: <a href="mailto:care@rapsap.com">care@rapsap.com</a></p>
         <p><strong>Rapsap Essential Retail Pvt Ltd</strong></p>
         <p>We are here to support you from 9 AM to 9 PM on all working days.</p>
+      </div>
       </div>
     </div>
 

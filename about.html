@@ -56,17 +56,51 @@
 
     <title>Rapsap</title>
     <style>
-      body {
-        background-image: none;
-        overflow: hidden;
+      html {
+        background: #000000;
       }
-    </style>
-  </head>
-  <body>
-    <div id="app">
+      body {
+        background: #000000;
+        color: #ffffff;
+        min-height: 100vh;
+      }
+      main {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 40px 80px;
+        text-align: center;
+      }
+      .nav-items ul li a {
+        color: #ffffff;
+      }
+      .nav-items ul li a:hover {
+        color: #5074f3;
+      }
+      .logo-nav {
+        filter: brightness(0) invert(1);
+      }
+      .hamburger {
+        filter: brightness(0) invert(1);
+      }
+      .footer {
+        background: #111111;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .footer-logo {
+        filter: brightness(0) invert(1);
+      }
+      @media screen and (max-width: 768px) {
+        main {
+          padding: 20px;
+        }
+        .nav-items {
+          background: #111111 !important;
+        }
+      }
+    </style>    <div id="app">
       <nav class="navbar">
         <a href="/">
-          <img src="/logo.svg" class="logo-nav" />
+          <img src="/image-assets/rapsap-logo.svg" class="logo-nav" />
         </a>
 
         <img class="hamburger" id="hamburger-btn" src="/hamburgerMenu.svg" />
@@ -287,7 +321,7 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-brand">
-          <h3>rapsap</h3>
+          <img src="/image-assets/rapsap-logo.svg" alt="Rapsap" class="footer-logo" />
           <p>Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes.</p>
           <div class="footer-contact">
             <p><a href="mailto:care@rapsap.com">care@rapsap.com</a></p>

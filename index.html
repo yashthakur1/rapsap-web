@@ -56,23 +56,17 @@
     <title>Rapsap</title>
     <style>
       body {
-        background-image: url("/bg.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      @media screen and (max-width: 768px) {
-        body {
-          background-image: url("/mob_bg.webp");
-        }
+        background: white;
       }
     </style>
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
     <div id="app">
       <nav class="navbar">
         <a href="/">
-          <img src="/logo.svg" class="logo-nav" />
+          <img src="/image-assets/rapsap-logo.svg" class="logo-nav" alt="Rapsap Logo" />
         </a>
 
         <img class="hamburger" id="hamburger-btn" src="/hamburgerMenu.svg" />
@@ -86,34 +80,60 @@
         </div>
       </nav>
 
-      <main class="content">
-        <p class="title">Essentials delivered,</p>
-
-        <p
-          class="animate__animated animate__lightSpeedInLeft animate__faster brand-name"
-        >
-          rapsap.
-        </p>
-
-        <p class="description">
-          Experience the store or get it at your door. Simple
-        </p>
-
-        <p class="highlight">
-          <span>Smooth</span> ordering, <span>Fast</span> delivery.
-        </p>
-
-        <!-- <button id="cta" class="cta shimmer">LAUNCHING SOON!</button> -->
-        <p class="launch-title shimmer">Launching Soon!</p>
+      <main class="hero-section">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>📍 Now live in Thane West</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Essentials delivered,<br />
+            <span class="hero-brand">rapsap</span>
+          </h1>
+          
+          <p class="hero-description">
+            Experience the store or get it at your door. Simple. Smooth ordering, fast delivery.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="https://wa.me/917738231532?text=Hi%20Rapsap,%20I%20would%20like%20to%20place%20an%20order" class="btn-whatsapp" target="_blank">
+              Order on WhatsApp
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 14.05 2.64 15.95 3.71 17.52L2 22L6.66 20.34C8.15 21.28 9.93 21.82 11.84 21.82H12C17.52 21.82 22 17.34 22 11.82C22 9.17 20.95 6.66 19.12 4.83C17.29 3 14.78 2 12 2ZM17.61 15.85C17.36 16.62 16.35 17.25 15.55 17.44C15.01 17.56 14.3 17.65 12 16.59C9.06 15.19 7.35 12.13 7.21 11.94C7.07 11.76 6 10.31 6 8.82C6 7.33 6.77 6.6 7.05 6.31C7.33 6.02 7.65 5.94 7.84 5.94C8.03 5.94 8.21 5.94 8.37 5.95C8.54 5.96 8.77 5.89 8.99 6.44C9.24 7.03 9.84 8.52 9.91 8.66C9.98 8.8 10.03 8.96 9.94 9.14C9.85 9.32 9.8 9.42 9.66 9.58C9.52 9.74 9.39 9.87 9.25 10.04C9.11 10.18 8.96 10.34 9.12 10.63C9.28 10.91 9.84 11.82 10.66 12.56C11.72 13.51 12.62 13.78 12.91 13.92C13.2 14.06 13.38 14.04 13.54 13.86C13.7 13.68 14.27 13 14.46 12.71C14.65 12.42 14.84 12.47 15.09 12.56C15.34 12.65 16.83 13.39 17.12 13.53C17.41 13.67 17.59 13.74 17.66 13.88C17.73 14.02 17.73 14.59 17.48 15.36L17.61 15.85Z" fill="white"/>
+              </svg>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.rapsap.customerapp" class="btn-app" target="_blank">
+              Get the App
+              <img src="/image-assets/googleplay-icon-white.png" alt="Google Play" class="app-icon" />
+              <img src="/image-assets/appstore-icon-white.png" alt="App Store" class="app-icon" />
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <div class="hero-image-container">
+            <div class="hero-mockup-image">
+              <lottie-player 
+                src="/image-assets/hero-animation-final.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%;"
+                loop
+                autoplay>
+              </lottie-player>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 
-    <canvas id="rive-canvas" width="900" height="900"></canvas>
+    <!-- Rive canvas hidden for new design -->
+    <!-- <canvas id="rive-canvas" width="900" height="900"></canvas> -->
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-brand">
-          <h3>rapsap</h3>
+          <img src="/image-assets/rapsap-logo.svg" alt="Rapsap" class="footer-logo" />
           <p>Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes.</p>
           <div class="footer-contact">
             <p><a href="mailto:care@rapsap.com">care@rapsap.com</a></p>
