@@ -94,10 +94,6 @@ button:focus-visible {
   justify-content: space-between;
   padding: 40px 120px;
   margin-bottom: 0;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -208,8 +204,6 @@ p {
   min-height: calc(100vh - 150px);
   padding: 50px 120px;
   gap: 60px;
-  max-width: 1440px;
-  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -528,9 +522,6 @@ p {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  padding: 0 120px;
-  max-width: 1440px;
-  margin: 0 auto;
   box-sizing: border-box;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -544,10 +535,16 @@ p {
 
 .about-content {
   display: flex;
-  align-items: baseline;
-  height: 100vh;
-  scroll-snap-align: end;
-  padding: 1% 1% 1% 114px;
+  align-items: center;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  padding: 20px 180px;
+  gap: 60px;
+}
+
+.about-content.one {
+  scroll-snap-align: center;
+  padding-top: 10px;
 }
 
 .typing {
@@ -588,6 +585,7 @@ p {
 }
 .about-content section {
   flex: 1;
+  padding: 0 20px;
 }
 
 .about-content.right {
@@ -670,8 +668,6 @@ p {
 
 .franchise-container {
   padding: 50px 120px;
-  max-width: 1440px;
-  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -1253,8 +1249,6 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 117px 120px 310px 120px;
-  max-width: 1440px;
-  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -1332,8 +1326,9 @@ p {
     padding: 117px 80px 310px 80px;
   }
   
-  .about-container {
-    padding: 0 80px;
+  .about-content {
+    padding: 15px 120px;
+    gap: 50px;
   }
   
   .franchise-container {
@@ -1362,8 +1357,9 @@ p {
     padding: 80px 40px 200px 40px;
   }
   
-  .about-container {
-    padding: 0 40px;
+  .about-content {
+    padding: 10px 80px;
+    gap: 40px;
   }
   
   .franchise-container {
@@ -1391,8 +1387,9 @@ p {
     padding: 60px 20px 150px 20px;
   }
   
-  .about-container {
-    padding: 0 20px;
+  .about-content {
+    padding: 10px 40px;
+    gap: 30px;
   }
   
   .franchise-container {
@@ -1787,7 +1784,7 @@ p {
 
     align-items: center;
     /* padding: 0px; */
-    padding: 0 0 0 16px;
+    /* padding: 0 0 0 16px; */
   }
 
   .about-title {
@@ -1993,8 +1990,6 @@ body.dark-theme .footer-logo {
 }
 
 .footer-container {
-  max-width: 1440px;
-  margin: 0 auto;
   padding: 60px 120px 40px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -2133,8 +2128,6 @@ body.dark-theme .footer-logo {
 .footer-bottom {
   text-align: center;
   padding: 20px 120px;
-  max-width: 1440px;
-  margin: 0 auto;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   color: #666;
   box-sizing: border-box;
