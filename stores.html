@@ -1,274 +1,323 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Stores — Find Rapsap near you</title>
     <meta name="author" content="Rapsap" />
     <meta
       name="description"
-      content="Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes. Get what you need, Rapsap!"
-    />
-    <meta name="keywords" content="Order, Groceries, Medicine, Rapsap" />
-
-    <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta
-      property="og:title"
-      content="Get Groceries, Medicines & More. Rapsap!"
-    />
-    <meta
-      property="og:description"
-      content="Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes. Get what you need, Rapsap!"
+      content="Premium Rapsap supermarkets inside and around top residential townships across Mumbai & Thane — each with fresh, grocery, café and online quick delivery."
     />
 
+    <meta property="og:title" content="Stores — Find Rapsap near you" />
+    <meta property="og:description" content="Premium supermarkets across Mumbai & Thane, with more opening soon." />
     <meta property="og:image" content="/meta.png" />
-    <meta property="og:url" content="https://rapsap.com/" />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Get Groceries, Medicines & More. Rapsap!"
-    />
-    <meta
-      name="twitter:description"
-      content="Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes. Get what you need, Rapsap!"
-    />
-    <meta name="twitter:image" content="/meta.png" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./src/style.css" />
+  </head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+  <body>
+    <a class="skip-link" href="#main">skip to content</a>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+    <div class="announce">
+      <span class="dot"></span>
+      now live at <strong>The Walk, Hiranandani Estate</strong> · Thane West — opening soon across Mumbai
+    </div>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Rapsap</title>
-    <style>
-      html {
-        background: #000000;
-        height: 100%;
-      }
-      body {
-        background: #000000;
-        color: #ffffff;
-        min-height: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-      }
-      #app {
-        background: #000000;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-      main {
-        flex: 1;
-      }
-      .nav-items ul li a {
-        color: #ffffff;
-      }
-      .nav-items ul li a:hover {
-        color: #5074f3;
-      }
-      .logo-nav {
-        filter: brightness(0) invert(1);
-      }
-      .hamburger {
-        filter: brightness(0) invert(1);
-      }
-      .footer {
-        background: #111111;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .footer-logo {
-        filter: brightness(0) invert(1);
-      }
-      .footer-section h4 {
-        color: #ffffff;
-      }
-      .footer-links a {
-        color: #999;
-      }
-      .footer-links a:hover {
-        color: #ffffff;
-      }
-      @media screen and (max-width: 768px) {
-        main {
-          padding: 20px;
-        }
-        .nav-items {
-          background: #111111 !important;
-        }
-      }
-    </style>    <div id="app">
-      <nav class="navbar">
-        <a href="/">
-          <img src="/image-assets/rapsap-logo.svg" class="logo-nav" />
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="header__logo" href="/index.html" aria-label="Rapsap home">
+          <img src="/logo.svg" alt="Rapsap" width="124" height="38" />
         </a>
-
-        <img class="hamburger" id="hamburger-btn" src="/hamburgerMenu.svg" />
-
-        <div class="nav-items" id="nav-menu">
-          <ul>
-            <li><a href="/about.html" id="about-link">About</a></li>
-            <li><a href="/franchise.html" id="franchise-link">Franchise</a></li>
-            <li><a href="/stores.html" id="store-link">Stores</a></li>
-          </ul>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="/stores.html">stores</a>
+          <a class="nav__link" href="/index.html#loyal">rapsap loyal</a>
+          <a class="nav__link" href="/index.html#categories">categories</a>
+          <a class="nav__link" href="/about.html">about</a>
+          <a class="nav__link" href="/franchise.html">partner with us</a>
+        </nav>
+        <div class="header__cta">
+          <a class="btn btn--ghost btn--sm" href="/stores.html">find a store</a>
+          <a class="btn btn--primary btn--sm" href="/index.html#app">download app</a>
         </div>
-      </nav>
-      <main class="store-container">
-        <section class="store-title-container">
-          <p class="store-main-title">
-            Current<br />
-            Operations
-          </p>
-          <p class="store-partnership">
-            Exclusive<br class="web-only" />
-            Partnership with<br />
-            <span class="highlighted-title-blue"> Lodha</span>
-          </p>
-        </section>
-        <section class="store-images-container">
-          <div class="store-image first">
-            <p class="store-title-name">Premier - Lodha</p>
-            <p class="store-address">
-              Unit 1,2 & 3, Amenities Block, Sonar Pada, Dombivli East,
-              Dombivli, Maharashtra 421203.<br />
-              Contact No : 9594594677
-            </p>
-          </div>
-          <div class="store-image second">
-            <p class="store-title-name">Downtown - Lodha</p>
-            <p class="store-address">
-              Units 3,4 & 5, Casa Urbano, sector 4 Downtown palava City, phase
-              II, Dombivli, Maharashtra 421201.<br />
-              Contact No : 9594594677
-            </p>
-          </div>
-          <div class="store-image third">
-            <p class="store-title-name">Lakeshore - Lodha</p>
-            <p class="store-address">
-              Shop no 2 to 6 uno retails, Lakeshore Greens, Palava City, Phase
-              II, Dombivli, Maharashtra 421204<br />
-              Contact No : 9594594677
-            </p>
-          </div>
-          <div class="store-image fourth">
-            <p class="store-title-name">Gold - Lodha</p>
-            <p class="store-address">
-              Shop No 1, Club house, Casa Bella Gold, Palava City, Thane,
-              Maharashtra 421204<br />
-              Contact No : 9594594677
-            </p>
-          </div>
-        </section>
-      </main>
+        <button class="burger" data-burger aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
+    </header>
 
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-brand">
-            <img src="/image-assets/rapsap-logo.svg" alt="Rapsap" class="footer-logo" />
-            <p>Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes.</p>
-            <div class="footer-contact">
-              <p><a href="mailto:care@rapsap.com">care@rapsap.com</a></p>
-              <div class="footer-social">
-                <a href="https://bit.ly/481ErZr" target="_blank" rel="noopener noreferrer" title="Instagram">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
-                  </svg>
-                </a>
-                <a href="https://bit.ly/4mKqZO6" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
-                <a href="https://bit.ly/46mMEpO" target="_blank" rel="noopener noreferrer" title="Facebook">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                </a>
-                <a href="https://bit.ly/3K2PO9w" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
+    <div class="mobile-nav" id="mobile-nav" data-mobile-nav data-open="false">
+      <a class="mobile-nav__link" href="/stores.html">stores</a>
+      <a class="mobile-nav__link" href="/index.html#loyal">rapsap loyal</a>
+      <a class="mobile-nav__link" href="/index.html#categories">categories</a>
+      <a class="mobile-nav__link" href="/about.html">about</a>
+      <a class="mobile-nav__link" href="/franchise.html">partner with us</a>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/index.html#app">download the app</a>
+        <a class="btn btn--ghost" href="/stores.html">find a store</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- ================= PAGE HEAD ================= -->
+      <section class="page-head">
+        <div class="wrap">
+          <span class="eyebrow">our stores</span>
+          <h1 class="display display--lg">find rapsap<br />near you.</h1>
+          <p class="lede">
+            seven premium supermarkets inside and around top residential townships across Mumbai,
+            Thane and Kalyan — each with fresh, grocery and online quick delivery.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= FLAGSHIP ================= -->
+      <section class="section section--tight">
+        <div class="wrap">
+          <div class="flagship reveal">
+            <div class="flagship__media">
+              <img src="/store-the-walk.webp" alt="Rapsap flagship storefront at The Walk, Hiranandani Estate" width="1280" height="800" />
+            </div>
+            <div class="flagship__body">
+              <span class="status status--open"><span class="dot"></span> flagship store</span>
+              <h2 class="display display--sm">the walk, hiranandani estate</h2>
+              <p class="body">
+                The Walk, High St, Hiranandani Estate, Thane West, Mumbai 400607 · 5,500 sq ft ·
+                open until 10:00pm
+              </p>
+              <div class="chips">
+                <span class="chip">in-store shopping</span>
+                <span class="chip">in-store pick-up</span>
+                <span class="chip">delivery</span>
+                <span class="chip">fresh produce</span>
+                <span class="chip">café</span>
+                <span class="chip">rapsap loyal</span>
+              </div>
+              <div class="btn-row mt-8">
+                <a class="btn btn--primary" href="https://maps.google.com/?q=rapsap+supermarket+the+walk+flagship+store" target="_blank" rel="noopener">get directions</a>
+                <a class="btn btn--ghost" href="tel:+918828136436">088281 36436</a>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul class="footer-links">
-              <li><a href="/about.html">About Us</a></li>
-              <li><a href="/franchise.html">Franchise</a></li>
-              <li><a href="/stores.html">Our Stores</a></li>
-            </ul>
+      <!-- ================= ALL STORES ================= -->
+      <section class="section section--tight">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">all stores</span>
+            <h2 class="display display--md">seven stores, live now.</h2>
           </div>
 
-          <div class="footer-section">
-            <h4>Legal</h4>
-            <ul class="footer-links">
-              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-              <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
-              <li><a href="/shipping-policy.html">Shipping & Delivery</a></li>
-              <li><a href="/refund-policy.html">Refund & Cancellation</a></li>
-              <li><a href="/contact-us-policy.html">Contact Us</a></li>
+          <div class="field" style="max-width: 420px; margin-bottom: 40px">
+            <label for="store-search">search by name or neighbourhood</label>
+            <input id="store-search" type="search" data-store-search placeholder="try “thane”, “kalyan”, “lodha”…" />
+          </div>
+
+          <div class="grid-3">
+            <article class="store-card reveal" data-store="the walk flagship hiranandani estate thane west grocery store">
+              <div class="store-card__media">
+                <img src="/store-the-walk.webp" alt="Rapsap flagship storefront at The Walk, Hiranandani Estate" width="1280" height="800" loading="lazy" />
+              </div>
+              <div class="store-card__body">
+                <span class="status status--open"><span class="dot"></span> now open</span>
+                <h3 class="store-card__name">the walk (flagship store)</h3>
+                <p class="store-card__area">The Walk, High St, Hiranandani Estate, Thane West, Mumbai 400607</p>
+                <a class="link-arrow mt-4" href="tel:+918828136436">088281 36436</a>
+                <div class="store-card__meta"><span>Grocery store</span> <span>open until 10:00pm</span></div>
+                <a class="link-arrow mt-4" href="https://maps.google.com/?q=rapsap+supermarket+the+walk+flagship+store" target="_blank" rel="noopener">directions →</a>
+              </div>
+            </article>
+
+            <article class="store-card reveal" data-reveal-delay="60" data-store="lodha upper thane mankoli grocery store">
+              <div class="store-card__media">
+                <img src="/store-upper-thane.webp" alt="Inside Rapsap Lodha Upper Thane" width="1280" height="800" loading="lazy" />
+              </div>
+              <div class="store-card__body">
+                <span class="status status--open"><span class="dot"></span> now open</span>
+                <h3 class="store-card__name">lodha upper thane</h3>
+                <p class="store-card__area">Ground Floor Unit No. 1, Cluster MLCP-B, Lodha Upper Thane, Mumbai–Nashik Expy, Mankoli, Thane 421302</p>
+                <a class="link-arrow mt-4" href="tel:+918485066292">084850 66292</a>
+                <div class="store-card__meta"><span>Grocery store</span> <span>open until 10:00pm</span></div>
+                <a class="link-arrow mt-4" href="https://maps.google.com/?q=rapsap+supermarket+lodha+upper+thane" target="_blank" rel="noopener">directions →</a>
+              </div>
+            </article>
+
+            <article class="store-card reveal" data-reveal-delay="120" data-store="lodha downtown palava city kalyan urbano convenience store">
+              <div class="store-card__media">
+                <img src="/store-downtown.webp" alt="Rapsap storefront at Lodha Downtown, Palava City" width="1280" height="800" loading="lazy" />
+              </div>
+              <div class="store-card__body">
+                <span class="status status--open"><span class="dot"></span> now open</span>
+                <h3 class="store-card__name">lodha downtown</h3>
+                <p class="store-card__area">2 Lodha, Cluster Urbano, Ground 03, 04, 05, Palava City Phase 2, Kalyan 421204</p>
+                <a class="link-arrow mt-4" href="tel:+919699345345">096993 45345</a>
+                <div class="store-card__meta"><span>Convenience store</span> <span>open until 10:30pm</span></div>
+                <a class="link-arrow mt-4" href="https://maps.google.com/?q=rapsap+supermarket+lodha+downtown" target="_blank" rel="noopener">directions →</a>
+              </div>
+            </article>
+
+            <article class="store-card reveal" data-store="lodha gold kalyan shilphata club house supermarket">
+              <div class="store-card__media">
+                <img src="/store-gold.webp" alt="Rapsap storefront at Lodha Gold" width="1280" height="800" loading="lazy" />
+              </div>
+              <div class="store-card__body">
+                <span class="status status--open"><span class="dot"></span> now open</span>
+                <h3 class="store-card__name">lodha gold</h3>
+                <p class="store-card__area">Shop No 1, Club House, Kalyan–Shilphata Rd</p>
+                <div class="store-card__meta"><span>Supermarket</span> <span>open until 10:00pm</span></div>
+                <a class="link-arrow mt-4" href="https://maps.google.com/?q=rapsap+supermarket+lodha+gold" target="_blank" rel="noopener">directions →</a>
+              </div>
+            </article>
+
+            <article class="store-card reveal" data-reveal-delay="60" data-store="superstore lodha luxuria casa viva thane gourmet gourmet grocery store">
+              <div class="store-card__media">
+                <img src="/store-placeholder.webp" alt="Rapsap Superstore, Lodha Luxuria" width="1280" height="800" loading="lazy" />
+              </div>
+              <div class="store-card__body">
+                <span class="status status--open"><span class="dot"></span> now open</span>
+                <h3 class="store-card__name">superstore — lodha luxuria</h3>
+                <p class="store-card__area">Casa Viva Retail Apollo, Shop no 7, 8 & 9, near Lodha Luxuria</p>
+                <div class="store-card__meta"><span>Gourmet grocery store</span> <span>open until 10:30pm</span></div>
+                <a class="link-arrow mt-4" href="https://maps.google.com/?q=Rapsap+Superstore+Lodha+Luxuria" target="_blank" rel="noopener">directions →</a>
+              </div>
+            </article>
+
+            <article class="store-card reveal" data-reveal-delay="120" data-store="sunrise parkview tower g grocery store">
+              <div class="store-card__media">
+                <img src="/store-placeholder.webp" alt="Rapsap supermarket, Sunrise Parkview" width="1280" height="800" loading="lazy" />
+              </div>
+              <div class="store-card__body">
+                <span class="status status--open"><span class="dot"></span> now open</span>
+                <h3 class="store-card__name">sunrise parkview</h3>
+                <p class="store-card__area">Tower G, Sunrise Parkview Rd</p>
+                <div class="store-card__meta"><span>Grocery store</span></div>
+                <a class="link-arrow mt-4" href="https://maps.google.com/?q=Rapsap+supermarket+Tower+G+Sunrise+Parkview" target="_blank" rel="noopener">directions →</a>
+              </div>
+            </article>
+
+            <article class="store-card reveal" data-store="rapsap store maharashtra grocery store">
+              <div class="store-card__media">
+                <img src="/store-rapsap-store.webp" alt="Fresh produce at Rapsap store" width="1280" height="800" loading="lazy" />
+              </div>
+              <div class="store-card__body">
+                <span class="status status--open"><span class="dot"></span> now open</span>
+                <h3 class="store-card__name">rapsap store</h3>
+                <p class="store-card__area">53HW+RR6, Maharashtra</p>
+                <a class="link-arrow mt-4" href="tel:+919594594677">095945 94677</a>
+                <div class="store-card__meta"><span>Grocery store</span> <span>open until 11:00pm</span></div>
+                <a class="link-arrow mt-4" href="https://maps.google.com/?q=Rapsap+store+53HW%2BRR6" target="_blank" rel="noopener">directions →</a>
+              </div>
+            </article>
+
+          </div>
+
+          <p class="lede mt-8" data-store-empty hidden>no stores match that search — try a different neighbourhood.</p>
+        </div>
+      </section>
+
+      <!-- ================= STANDARDS ================= -->
+      <section class="section section--white">
+        <div class="wrap">
+          <div class="split">
+            <div class="split__media reveal">
+              <img src="/store-upper-thane.webp" alt="Bright, clearly signed aisles inside a Rapsap supermarket" width="1280" height="800" loading="lazy" />
+            </div>
+            <div class="split__copy reveal" data-reveal-delay="100">
+              <span class="eyebrow">in-store experience</span>
+              <h2 class="display display--md">world-class<br />retail standards.</h2>
+              <p class="lede">
+                a clean, bright, well-run store is the whole point. here's the standard we hold — in every
+                aisle, every shift, every neighbourhood.
+              </p>
+              <ul class="checks">
+                <li><span class="tick" aria-hidden="true">✓</span> wide, well-lit, clearly signed aisles, cleaned every shift</li>
+                <li><span class="tick" aria-hidden="true">✓</span> cold-chain maintained; produce inspected and rotated daily</li>
+                <li><span class="tick" aria-hidden="true">✓</span> uniformed, trained teams who respect your time</li>
+                <li><span class="tick" aria-hidden="true">✓</span> quick, accurate billing with member savings shown clearly</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+      <section class="section section--blue">
+        <div class="wrap cta-band">
+          <h2 class="display display--lg">opening soon, near you.</h2>
+          <p class="lede">want Rapsap in your neighbourhood or society? tell us where.</p>
+          <div class="btn-row">
+            <a class="btn btn--onBlue" href="/franchise.html">partner with us</a>
+            <a class="btn btn--onDarkGhost" href="/index.html#app">download the app</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img src="/logo-light.svg" alt="Rapsap" width="124" height="38" />
+            <p class="footer__blurb">
+              a premium hybrid supermarket for modern neighbourhoods — shop in store or get essentials
+              delivered quickly to your door.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="/about.html">about rapsap</a></li>
+              <li><a href="/stores.html">stores</a></li>
+              <li><a href="/franchise.html">partner with us</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>customer</h4>
+            <ul>
+              <li><a href="/index.html#app">download the app</a></li>
+              <li><a href="/index.html#loyal">rapsap loyal</a></li>
+              <li><a href="/index.html#categories">categories</a></li>
+              <li><a href="/contact-us-policy.html">contact us</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>business</h4>
+            <ul>
+              <li><a href="/franchise.html">landlord partnerships</a></li>
+              <li><a href="/franchise.html">vendor partnerships</a></li>
+              <li><a href="/franchise.html">franchise enquiries</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>legal</h4>
+            <ul>
+              <li><a href="/privacy-policy.html">privacy policy</a></li>
+              <li><a href="/terms-conditions.html">terms &amp; conditions</a></li>
+              <li><a href="/shipping-policy.html">delivery policy</a></li>
+              <li><a href="/refund-policy.html">refund policy</a></li>
             </ul>
           </div>
         </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2025 Rapsap Essential Retail Pvt Ltd. All rights reserved.</p>
-          <p>Made with passion for your daily essentials</p>
+        <div class="footer__bottom">
+          <span>© 2026 Rapsap Essential Retail Pvt Ltd. all rights reserved.</span>
+          <div class="footer__socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="X">X</a>
+            <a href="#" aria-label="Facebook">f</a>
+          </div>
         </div>
-      </footer>
-    </div>
-    <script>
-      const currentPage = window.location.pathname;
+      </div>
+    </footer>
 
-      const aboutLink = document.getElementById("about-link");
-      const franchiseLink = document.getElementById("franchise-link");
-      const storeLink = document.getElementById("store-link");
-
-      const hamburgerBtn = document.getElementById("hamburger-btn");
-      const navMenu = document.getElementById("nav-menu");
-
-      if (franchiseLink && currentPage === "/franchise.html") {
-        franchiseLink.classList.add("active");
-      }
-      if (aboutLink && currentPage === "/about.html") {
-        aboutLink.classList.add("active");
-      }
-
-      if (storeLink && currentPage === "/stores.html") {
-        storeLink.classList.add("active");
-      }
-
-      if (hamburgerBtn) {
-        hamburgerBtn.addEventListener("click", function () {
-          if (navMenu) navMenu.classList.toggle("show");
-        });
-      }
-
-    </script>
+    <script type="module" src="/script.js"></script>
   </body>
 </html>

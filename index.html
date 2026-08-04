@@ -1,302 +1,548 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<meta name="author" content="Rapsap" />
-		<meta
-			name="description"
-			content="Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes. Get what you need, Rapsap!"
-		/>
-		<meta name="keywords" content="Order, Groceries, Medicine, Rapsap" />
+    <title>Rapsap — Premium Supermarket. Everyday Smart Prices.</title>
+    <meta name="author" content="Rapsap" />
+    <meta
+      name="description"
+      content="A premium hybrid supermarket for modern neighbourhoods. Walk into a Rapsap store across Mumbai & Thane, or get groceries, fresh produce and daily essentials delivered quickly from the shelves nearest you."
+    />
+    <meta name="keywords" content="Rapsap, supermarket, groceries, quick delivery, Mumbai, Thane, premium supermarket, rapsap loyal" />
 
-		<!-- Open Graph (Facebook, LinkedIn) -->
-		<meta property="og:title" content="Get Groceries, Medicines & More. Rapsap!" />
-		<meta
-			property="og:description"
-			content="Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes. Get what you need, Rapsap!"
-		/>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rapsap — Premium Supermarket. Everyday Smart Prices." />
+    <meta
+      property="og:description"
+      content="Walk into a premium store or get it delivered quickly from the same shelves. Rapsap."
+    />
+    <meta property="og:image" content="/meta.png" />
+    <meta property="og:url" content="https://rapsap.com/" />
+    <meta property="og:type" content="website" />
 
-		<meta property="og:image" content="/meta.png" />
-		<meta property="og:url" content="https://rapsap.com/" />
-		<meta property="og:type" content="website" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rapsap — Premium Supermarket. Everyday Smart Prices." />
+    <meta
+      name="twitter:description"
+      content="Walk into a premium store or get it delivered quickly from the same shelves. Rapsap."
+    />
+    <meta name="twitter:image" content="/meta.png" />
 
-		<!-- Twitter Card -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Get Groceries, Medicines & More. Rapsap!" />
-		<meta
-			name="twitter:description"
-			content="Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes. Get what you need, Rapsap!"
-		/>
-		<meta name="twitter:image" content="/meta.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
 
-		<link rel="stylesheet" href="./src/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
-			rel="stylesheet"
-		/>
+  <body>
+    <a class="skip-link" href="#main">skip to content</a>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
-			rel="stylesheet"
-		/>
+    <!-- ================= ANNOUNCEMENT ================= -->
+    <div class="announce">
+      <span class="dot"></span>
+      now live at <strong>The Walk, Hiranandani Estate</strong> · Thane West — opening soon across Mumbai
+    </div>
 
-		<title>Rapsap</title>
-		<style>
-			body {
-				background: white;
-			}
-		</style>
-		<!-- Lottie Player -->
-		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-	</head>
-	<body>
-		<div id="app">
-			<nav class="navbar">
-				<a href="/">
-					<img
-						src="/image-assets/rapsap-logo.svg"
-						class="logo-nav"
-						alt="Rapsap Logo"
-					/>
-				</a>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="header__logo" href="/index.html" aria-label="Rapsap home">
+          <img src="/logo.svg" alt="Rapsap" width="124" height="38" />
+        </a>
 
-				<img class="hamburger" id="hamburger-btn" src="/hamburgerMenu.svg" />
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="/stores.html">stores</a>
+          <a class="nav__link" href="#loyal">rapsap loyal</a>
+          <a class="nav__link" href="#categories">categories</a>
+          <a class="nav__link" href="/about.html">about</a>
+          <a class="nav__link" href="/franchise.html">partner with us</a>
+        </nav>
 
-				<div class="nav-items" id="nav-menu">
-					<ul>
-						<li><a href="/about.html" id="about-link">About</a></li>
-						<li>
-							<a href="/franchise.html" id="franchise-link">Franchise</a>
-						</li>
-						<li><a href="/stores.html" id="store-link">Stores</a></li>
-					</ul>
-				</div>
-			</nav>
+        <div class="header__cta">
+          <a class="btn btn--ghost btn--sm" href="/stores.html">find a store</a>
+          <a class="btn btn--primary btn--sm" href="#app">download app</a>
+        </div>
 
-			<main class="hero-section">
-				<div class="hero-content">
-					<div class="hero-badge">
-						<span>📍 Now live in Thane West</span>
-					</div>
+        <button class="burger" data-burger aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
+    </header>
 
-					<h1 class="hero-title">
-						Essentials delivered,<br />
-						<span class="hero-brand">rapsap</span>
-					</h1>
+    <div class="mobile-nav" id="mobile-nav" data-mobile-nav data-open="false">
+      <a class="mobile-nav__link" href="/stores.html">stores</a>
+      <a class="mobile-nav__link" href="#loyal">rapsap loyal</a>
+      <a class="mobile-nav__link" href="#categories">categories</a>
+      <a class="mobile-nav__link" href="/about.html">about</a>
+      <a class="mobile-nav__link" href="/franchise.html">partner with us</a>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#app">download the app</a>
+        <a class="btn btn--ghost" href="/stores.html">find a store</a>
+      </div>
+    </div>
 
-					<p class="hero-description">
-						Experience the store or get it at your door. Simple. Smooth
-						ordering, fast delivery.
-					</p>
+    <main id="main">
+      <!-- ================= HERO ================= -->
+      <section class="hero">
+        <div class="hero__media">
+          <img src="/store-upper-thane.webp"
+               alt="Bright, clearly signed aisles inside a Rapsap supermarket"
+               width="1280" height="800" fetchpriority="high" />
+        </div>
 
-					<div class="hero-buttons">
-						<a
-							href="https://wa.me/917738231532?text=Hi%20Rapsap,%20I%20would%20like%20to%20place%20an%20order"
-							class="btn-whatsapp"
-							target="_blank"
-						>
-							Order on WhatsApp
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M12 2C6.48 2 2 6.48 2 12C2 14.05 2.64 15.95 3.71 17.52L2 22L6.66 20.34C8.15 21.28 9.93 21.82 11.84 21.82H12C17.52 21.82 22 17.34 22 11.82C22 9.17 20.95 6.66 19.12 4.83C17.29 3 14.78 2 12 2ZM17.61 15.85C17.36 16.62 16.35 17.25 15.55 17.44C15.01 17.56 14.3 17.65 12 16.59C9.06 15.19 7.35 12.13 7.21 11.94C7.07 11.76 6 10.31 6 8.82C6 7.33 6.77 6.6 7.05 6.31C7.33 6.02 7.65 5.94 7.84 5.94C8.03 5.94 8.21 5.94 8.37 5.95C8.54 5.96 8.77 5.89 8.99 6.44C9.24 7.03 9.84 8.52 9.91 8.66C9.98 8.8 10.03 8.96 9.94 9.14C9.85 9.32 9.8 9.42 9.66 9.58C9.52 9.74 9.39 9.87 9.25 10.04C9.11 10.18 8.96 10.34 9.12 10.63C9.28 10.91 9.84 11.82 10.66 12.56C11.72 13.51 12.62 13.78 12.91 13.92C13.2 14.06 13.38 14.04 13.54 13.86C13.7 13.68 14.27 13 14.46 12.71C14.65 12.42 14.84 12.47 15.09 12.56C15.34 12.65 16.83 13.39 17.12 13.53C17.41 13.67 17.59 13.74 17.66 13.88C17.73 14.02 17.73 14.59 17.48 15.36L17.61 15.85Z"
-									fill="white"
-								/>
-							</svg>
-						</a>
-						<a
-							href="https://play.google.com/store/apps/details?id=com.rapsap.customerapp"
-							class="btn-app"
-							target="_blank"
-						>
-							Get the App
-							<img
-								src="/image-assets/googleplay-icon-white.png"
-								alt="Google Play"
-								class="app-icon"
-							/>
-							<img
-								src="/image-assets/appstore-icon-white.png"
-								alt="App Store"
-								class="app-icon"
-							/>
-						</a>
-					</div>
-				</div>
+        <div class="wrap hero__inner">
+          <span class="hero__status"><span class="dot"></span> now open · thane west</span>
 
-				<div class="hero-image">
-					<div class="hero-image-container">
-						<div class="hero-mockup-image">
-							<lottie-player
-								src="/image-assets/hero-animation-final.json"
-								background="transparent"
-								speed="1"
-								style="width: 100%; height: 100%"
-								loop
-								autoplay
-							>
-							</lottie-player>
-						</div>
-					</div>
-				</div>
-			</main>
-		</div>
+          <h1 class="hero__line">walk into a <em>better</em> supermarket.</h1>
 
-		<!-- Rive canvas hidden for new design -->
-		<!-- <canvas id="rive-canvas" width="900" height="900"></canvas> -->
+          <p class="hero__sub">
+            bright aisles, fresh counters and a café — priced for the weekly shop.
+            seven neighbourhoods across Mumbai, Thane and Kalyan.
+          </p>
 
-		<footer class="footer">
-			<div class="footer-container">
-				<div class="footer-brand">
-					<img
-						src="/image-assets/rapsap-logo.svg"
-						alt="Rapsap"
-						class="footer-logo"
-					/>
-					<p>
-						Your hybrid superstore for groceries, dairy, fruits & medicines.
-						Shop in-store or get essentials delivered in 10 minutes.
-					</p>
-					<div class="footer-contact">
-						<p><a href="mailto:care@rapsap.com">care@rapsap.com</a></p>
-						<div class="footer-social">
-							<a
-								href="https://bit.ly/481ErZr"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="Instagram"
-							>
-								<svg
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="currentColor"
-								>
-									<path
-										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"
-									/>
-								</svg>
-							</a>
-							<a
-								href="https://bit.ly/4mKqZO6"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="X (Twitter)"
-							>
-								<svg
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="currentColor"
-								>
-									<path
-										d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-									/>
-								</svg>
-							</a>
-							<a
-								href="https://bit.ly/46mMEpO"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="Facebook"
-							>
-								<svg
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="currentColor"
-								>
-									<path
-										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-									/>
-								</svg>
-							</a>
-							<a
-								href="https://bit.ly/3K2PO9w"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="LinkedIn"
-							>
-								<svg
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="currentColor"
-								>
-									<path
-										d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-									/>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
+          <div class="hero__cta">
+            <a class="btn btn--onDark" href="/stores.html">find your store</a>
+            <a class="btn btn--onDarkGhost" href="#app">or order online</a>
+          </div>
 
-				<div class="footer-section">
-					<h4>Quick Links</h4>
-					<ul class="footer-links">
-						<li><a href="/about.html">About Us</a></li>
-						<li><a href="/franchise.html">Franchise</a></li>
-						<li><a href="/stores.html">Our Stores</a></li>
-					</ul>
-				</div>
+          <div class="hero__foot">
+            <span><b>7</b> stores open now</span>
+            <span><b>7%</b> off MRP with rapsap loyal</span>
+            <span><b>quick delivery</b> from the same shelves</span>
+          </div>
+        </div>
+      </section>
 
-				<div class="footer-section">
-					<h4>Legal</h4>
-					<ul class="footer-links">
-						<li><a href="/privacy-policy.html">Privacy Policy</a></li>
-						<li><a href="/terms-conditions.html">Terms & Conditions</a></li>
-						<li><a href="/shipping-policy.html">Shipping & Delivery</a></li>
-						<li><a href="/refund-policy.html">Refund & Cancellation</a></li>
-						<li><a href="/contact-us-policy.html">Contact Us</a></li>
-					</ul>
-				</div>
-			</div>
+      <!-- ================= WHY RAPSAP ================= -->
+      <section class="section section--white">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">why rapsap</span>
+            <h2 class="display display--md">a better way to shop daily essentials.</h2>
+          </div>
 
-			<div class="footer-bottom">
-				<p>&copy; 2025 Rapsap Essential Retail Pvt Ltd. All rights reserved.</p>
-				<p>Made with passion for your daily essentials</p>
-			</div>
-		</footer>
+          <div class="grid-3">
+            <article class="card card--hover reveal">
+              <div class="card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1v22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+              </div>
+              <h3 class="h-md">value &amp; savings</h3>
+              <p class="body">
+                smart everyday prices, member savings shown plainly, and no deep-discount theatre.
+                premium that doesn't cost premium.
+              </p>
+            </article>
 
-		<script>
-			const currentPage = window.location.pathname;
+            <article class="card card--hover reveal" data-reveal-delay="90">
+              <div class="card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="M9 12l2 2 4-4" />
+                </svg>
+              </div>
+              <h3 class="h-md">experience &amp; hygiene</h3>
+              <p class="body">
+                bright, clean, well-signed aisles. fresh produce handled to standard, an in-store café and
+                bakery, and service that respects your time.
+              </p>
+            </article>
 
-			const aboutLink = document.getElementById("about-link");
-			const franchiseLink = document.getElementById("franchise-link");
-			const storeLink = document.getElementById("store-link");
+            <article class="card card--hover reveal" data-reveal-delay="180">
+              <div class="card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z" />
+                </svg>
+              </div>
+              <h3 class="h-md">speed &amp; convenience</h3>
+              <p class="body">
+                online quick delivery from a real store near you. the same trusted assortment online and
+                on the shelf.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-			const hamburgerBtn = document.getElementById("hamburger-btn");
-			const navMenu = document.getElementById("nav-menu");
+      <!-- ================= THE STORE ================= -->
+      <section class="section" id="store">
+        <div class="wrap">
+          <div class="split">
+            <div class="split__media reveal">
+              <img src="/store-upper-thane.webp" alt="Inside Rapsap Lodha Upper Thane" width="1280" height="800" />
+            </div>
+            <div class="split__copy reveal" data-reveal-delay="100">
+              <span class="eyebrow">the store</span>
+              <h2 class="display display--md">world-class retail,<br />closer home.</h2>
+              <p class="lede">
+                bright, hygienic aisles. clearly signed categories. fresh produce handled with care,
+                an in-store café and bakery, and staff trained to a single standard across every neighbourhood.
+              </p>
+              <ul class="checks">
+                <li><span class="tick" aria-hidden="true">✓</span> fresh produce handled daily</li>
+                <li><span class="tick" aria-hidden="true">✓</span> clearly signed, easy-to-shop aisles</li>
+                <li><span class="tick" aria-hidden="true">✓</span> in-store café &amp; fresh bakery</li>
+                <li><span class="tick" aria-hidden="true">✓</span> one hygiene standard, every store</li>
+              </ul>
+              <a class="link-arrow" href="/stores.html">explore the store experience →</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			if (franchiseLink && currentPage === "/franchise.html") {
-				franchiseLink.classList.add("active");
-			}
-			if (aboutLink && currentPage === "/about.html") {
-				aboutLink.classList.add("active");
-			}
+      <!-- ================= THE APP ================= -->
+      <section class="section section--dark" id="app">
+        <div class="wrap">
+          <div class="split split--reverse">
+            <div class="split__media reveal" style="box-shadow: none; background: transparent; aspect-ratio: auto">
+              <!-- App UI mock -->
+              <div class="phone">
+                <div class="phone__screen">
+                  <div class="phone__status"><span>9:41</span><span>5G ▪ ▪ ▪</span></div>
+                  <div class="phone__head">
+                    <div class="phone__loc">
+                      <div>
+                        <div class="phone__loc-k">deliver to</div>
+                        <div class="phone__loc-v">thane west, 400607 ▾</div>
+                      </div>
+                      <div class="phone__avatar">R</div>
+                    </div>
+                    <div class="phone__eta">
+                      <b>quick delivery</b>
+                      <span>from your store</span>
+                    </div>
+                    <div class="phone__search">search for milk, eggs, atta…</div>
+                    <div class="phone__tabs">
+                      <span class="phone__tab phone__tab--on">fresh</span>
+                      <span class="phone__tab">grocery</span>
+                      <span class="phone__tab">dairy</span>
+                      <span class="phone__tab">café</span>
+                    </div>
+                  </div>
+                  <div class="phone__body">
+                    <div class="phone__product">
+                      <span class="phone__save">save ₹4</span>
+                      <div class="phone__thumb" aria-hidden="true">🍌</div>
+                      <div>
+                        <div class="phone__pname">robusta bananas</div>
+                        <div class="phone__pmeta">1 kg · loose</div>
+                        <div class="phone__prices">
+                          <span class="phone__price num">₹36</span>
+                          <span class="phone__mrp num">₹40</span>
+                        </div>
+                      </div>
+                      <span class="phone__add">add</span>
+                    </div>
+                  </div>
+                  <div class="phone__nav">
+                    <span class="on">home</span><span>categories</span><span>loyal</span><span>cart</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-			if (storeLink && currentPage === "/stores.html") {
-				storeLink.classList.add("active");
-			}
+            <div class="split__copy reveal" data-reveal-delay="100">
+              <span class="eyebrow">the app</span>
+              <h2 class="display display--md">online quick<br />supermarket delivery.</h2>
+              <p class="lede">
+                the full Rapsap aisle in your pocket. fresh, fast and reliable — every order picked and packed
+                at a real store near you, not a faceless warehouse.
+              </p>
+              <div class="btn-row">
+                <a class="btn btn--onDark" href="#">order now</a>
+                <a class="btn btn--onDarkGhost" href="/stores.html">find a store</a>
+              </div>
+            </div>
+          </div>
 
-			if (hamburgerBtn) {
-				hamburgerBtn.addEventListener("click", function () {
-					if (navMenu) navMenu.classList.toggle("show");
-				});
-			}
-		</script>
-	</body>
+          <!-- How it works -->
+          <div class="steps mt-12">
+            <div class="step reveal">
+              <div class="step__n">01</div>
+              <h3 class="step__t">open the app</h3>
+              <p class="step__d">set your location — we map you to your nearest Rapsap store.</p>
+            </div>
+            <div class="step reveal" data-reveal-delay="80">
+              <div class="step__n">02</div>
+              <h3 class="step__t">choose products</h3>
+              <p class="step__d">shop the full aisle: fresh, grocery, dairy, snacks, care &amp; pharmacy essentials.</p>
+            </div>
+            <div class="step reveal" data-reveal-delay="160">
+              <div class="step__n">03</div>
+              <h3 class="step__t">checkout</h3>
+              <p class="step__d">apply rapsap loyal savings and pay in a tap.</p>
+            </div>
+            <div class="step reveal" data-reveal-delay="240">
+              <div class="step__n">04</div>
+              <h3 class="step__t">delivered quickly</h3>
+              <p class="step__d">picked and packed at the store, then straight to your door.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= RAPSAP LOYAL ================= -->
+      <section class="section section--white" id="loyal">
+        <div class="wrap">
+          <div class="split">
+            <div class="split__copy reveal">
+              <span class="eyebrow eyebrow--blue">rapsap loyal · ₹499 / year</span>
+              <h2 class="display display--md">7% extra savings.<br />every time.</h2>
+              <p class="lede">
+                one simple membership. member prices below MRP, in store and on the app — with the saving
+                shown plainly on every basket. spend around ₹7,200 a month and it pays for itself in the
+                first month.
+              </p>
+              <div class="btn-row">
+                <a class="btn btn--primary" href="#">become rapsap loyal</a>
+              </div>
+            </div>
+
+            <!-- Signature: the membership card, held in the hand -->
+            <div class="cardstage reveal" data-reveal-delay="100">
+              <button class="loyalcard" data-loyalcard type="button">
+                <span class="loyalcard__sheen" aria-hidden="true"></span>
+                <svg class="loyalcard__mark" viewBox="0 0 120 96" aria-hidden="true">
+                  <path d="M28 4h72l-12 18H16z" /><path d="M52 28h44l-12 18H40z" />
+                  <path d="M36 52h56l-12 18H24z" /><path d="M12 76h76l-12 18H0z" />
+                </svg>
+
+                <span class="loyalcard__row loyalcard__row--top">
+                  <span class="loyalcard__brand">rapsap <b>loyal</b></span>
+                  <span class="loyalcard__rate num">7%</span>
+                </span>
+
+                <span class="loyalcard__num num">2026 · 4917 · 0058 · 3720</span>
+
+                <span class="loyalcard__row loyalcard__row--bottom">
+                  <span class="loyalcard__field">
+                    <small>member</small>
+                    Siddhesh Ghuge
+                  </span>
+                  <span class="loyalcard__field loyalcard__field--end">
+                    <small>per year</small>
+                    <span class="num">₹499</span>
+                  </span>
+                </span>
+              </button>
+
+              <canvas class="confetti" data-confetti aria-hidden="true"></canvas>
+              <p class="cardstage__hint" data-card-hint>hover to tilt · click to celebrate</p>
+            </div>
+          </div>
+
+          <!-- the maths, kept quiet so the card stays the loud thing -->
+          <div class="maths reveal">
+            <span class="maths__item">
+              <small>a ₹4,000 monthly basket at MRP</small>
+              <b class="num">₹4,000</b>
+            </span>
+            <span class="maths__arrow" aria-hidden="true">→</span>
+            <span class="maths__item">
+              <small>the same basket, rapsap loyal</small>
+              <b class="num">₹3,720</b>
+            </span>
+            <span class="maths__arrow" aria-hidden="true">→</span>
+            <span class="maths__item maths__item--save">
+              <small>you keep, every month</small>
+              <b class="num">₹280</b>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CATEGORIES ================= -->
+      <section class="section" id="categories">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">everything you shop</span>
+            <h2 class="display display--md">one supermarket. every aisle.</h2>
+          </div>
+
+          <!-- the aisle directory, as it reads overhead in store -->
+          <ol class="aisles reveal">
+            <li class="aisle">
+              <span class="aisle__n num">01</span>
+              <span class="aisle__name">fresh produce</span>
+              <span class="aisle__items">fruits &amp; vegetables</span>
+            </li>
+            <li class="aisle">
+              <span class="aisle__n num">02</span>
+              <span class="aisle__name">grocery &amp; staples</span>
+              <span class="aisle__items">atta, rice, oils, dals</span>
+            </li>
+            <li class="aisle">
+              <span class="aisle__n num">03</span>
+              <span class="aisle__name">dairy &amp; bakery</span>
+              <span class="aisle__items">milk, curd, breads</span>
+            </li>
+            <li class="aisle">
+              <span class="aisle__n num">04</span>
+              <span class="aisle__name">beverages</span>
+              <span class="aisle__items">juices, tea, coffee</span>
+            </li>
+            <li class="aisle">
+              <span class="aisle__n num">05</span>
+              <span class="aisle__name">snacks</span>
+              <span class="aisle__items">everyday &amp; premium</span>
+            </li>
+            <li class="aisle">
+              <span class="aisle__n num">06</span>
+              <span class="aisle__name">personal care</span>
+              <span class="aisle__items">beauty &amp; wellness</span>
+            </li>
+            <li class="aisle">
+              <span class="aisle__n num">07</span>
+              <span class="aisle__name">home care</span>
+              <span class="aisle__items">cleaning &amp; laundry</span>
+            </li>
+            <li class="aisle">
+              <span class="aisle__n num">08</span>
+              <span class="aisle__name">pharmacy</span>
+              <span class="aisle__items">essentials, where available</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ================= FIND RAPSAP ================= -->
+      <section class="section section--subtle">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">find rapsap</span>
+            <h2 class="display display--md">built for modern neighbourhoods.</h2>
+            <p class="lede">
+              premium supermarkets inside and around top residential townships across Mumbai &amp; Thane —
+              with more opening soon.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <a class="store-card reveal" href="/stores.html">
+              <div class="store-card__media">
+                <img src="/store-the-walk.webp" alt="Rapsap flagship storefront at The Walk, Hiranandani Estate" width="1280" height="800" />
+              </div>
+              <div class="store-card__body">
+                <span class="status status--open"><span class="dot"></span> now open</span>
+                <h3 class="store-card__name">the walk (flagship store)</h3>
+                <p class="store-card__area">The Walk, High St, Hiranandani Estate, Thane West</p>
+                <div class="store-card__meta"><span>Grocery store</span> <span>open until 10:00pm</span></div>
+              </div>
+            </a>
+
+            <a class="store-card reveal" data-reveal-delay="90" href="/stores.html">
+              <div class="store-card__media">
+                <img src="/store-upper-thane.webp" alt="Inside Rapsap Lodha Upper Thane" width="1280" height="800" />
+              </div>
+              <div class="store-card__body">
+                <span class="status status--open"><span class="dot"></span> now open</span>
+                <h3 class="store-card__name">lodha upper thane</h3>
+                <p class="store-card__area">Cluster MLCP-B, Lodha Upper Thane, Mankoli, Thane</p>
+                <div class="store-card__meta"><span>Grocery store</span> <span>open until 10:00pm</span></div>
+              </div>
+            </a>
+
+            <a class="store-card reveal" data-reveal-delay="180" href="/stores.html">
+              <div class="store-card__media">
+                <img src="/store-downtown.webp" alt="Rapsap storefront at Lodha Downtown, Palava City" width="1280" height="800" />
+              </div>
+              <div class="store-card__body">
+                <span class="status status--open"><span class="dot"></span> now open</span>
+                <h3 class="store-card__name">lodha downtown</h3>
+                <p class="store-card__area">Cluster Urbano, Palava City Phase 2, Kalyan</p>
+                <div class="store-card__meta"><span>Convenience store</span> <span>open until 10:30pm</span></div>
+              </div>
+            </a>
+
+          </div>
+
+          <div class="mt-10">
+            <a class="btn btn--dark" href="/stores.html">find a store near you</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+      <section class="section section--blue">
+        <div class="wrap cta-band">
+          <h2 class="display display--lg">in store or online.</h2>
+          <p class="lede">
+            download the app, find your nearest store, and shop premium essentials at everyday smart prices.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--onBlue" href="#">download the app</a>
+            <a class="btn btn--onDarkGhost" href="/stores.html">find a store</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img src="/logo-light.svg" alt="Rapsap" width="124" height="38" />
+            <p class="footer__blurb">
+              a premium hybrid supermarket for modern neighbourhoods — shop in store or get essentials
+              delivered quickly to your door.
+            </p>
+          </div>
+
+          <div class="footer__col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="/about.html">about rapsap</a></li>
+              <li><a href="/stores.html">stores</a></li>
+              <li><a href="/franchise.html">partner with us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4>customer</h4>
+            <ul>
+              <li><a href="#app">download the app</a></li>
+              <li><a href="#loyal">rapsap loyal</a></li>
+              <li><a href="#categories">categories</a></li>
+              <li><a href="/contact-us-policy.html">contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4>business</h4>
+            <ul>
+              <li><a href="/franchise.html">landlord partnerships</a></li>
+              <li><a href="/franchise.html">vendor partnerships</a></li>
+              <li><a href="/franchise.html">franchise enquiries</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4>legal</h4>
+            <ul>
+              <li><a href="/privacy-policy.html">privacy policy</a></li>
+              <li><a href="/terms-conditions.html">terms &amp; conditions</a></li>
+              <li><a href="/shipping-policy.html">delivery policy</a></li>
+              <li><a href="/refund-policy.html">refund policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© 2026 Rapsap Essential Retail Pvt Ltd. all rights reserved.</span>
+          <div class="footer__socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="X">X</a>
+            <a href="#" aria-label="Facebook">f</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/script.js"></script>
+  </body>
 </html>

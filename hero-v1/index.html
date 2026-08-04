@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+
+    <title>Hero v1 — Shelf edge — Rapsap</title>
+    <meta name="description" content="Hero design exploration: the shelf-edge price label at architectural scale." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/hero-variants.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">skip to content</a>
+
+    <div class="announce">
+      <span class="dot"></span>
+      now live at <strong>The Walk, Hiranandani Estate</strong> · Thane West — opening soon across Mumbai
+    </div>
+
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="header__logo" href="/index.html" aria-label="Rapsap home">
+          <img src="/logo.svg" alt="Rapsap" width="124" height="38" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="/stores.html">stores</a>
+          <a class="nav__link" href="/index.html#loyal">rapsap loyal</a>
+          <a class="nav__link" href="/index.html#categories">categories</a>
+          <a class="nav__link" href="/about.html">about</a>
+          <a class="nav__link" href="/franchise.html">partner with us</a>
+        </nav>
+        <div class="header__cta">
+          <a class="btn btn--ghost btn--sm" href="/stores.html">find a store</a>
+          <a class="btn btn--primary btn--sm" href="/index.html#app">download app</a>
+        </div>
+        <button class="burger" data-burger aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav" data-mobile-nav data-open="false">
+      <a class="mobile-nav__link" href="/stores.html">stores</a>
+      <a class="mobile-nav__link" href="/index.html#loyal">rapsap loyal</a>
+      <a class="mobile-nav__link" href="/index.html#categories">categories</a>
+      <a class="mobile-nav__link" href="/about.html">about</a>
+      <a class="mobile-nav__link" href="/franchise.html">partner with us</a>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/index.html#app">download the app</a>
+        <a class="btn btn--ghost" href="/stores.html">find a store</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hv1">
+        <div class="wrap">
+          <span class="eyebrow hv1__eyebrow">shelf edge · every aisle, every store</span>
+
+          <!-- The label itself: the four facts a shelf tag always carries -->
+          <div class="shelf">
+            <div class="shelf__body">
+              <h1 class="shelf__name">
+                premium supermarket.<br />
+                everyday <span class="accent">smart prices.</span>
+              </h1>
+              <p class="shelf__sub">
+                the same tag hangs on every shelf in every Rapsap: what it costs, what you pay,
+                and what you keep. no deep-discount theatre, no fine print.
+              </p>
+
+              <div class="shelf__prices">
+                <span class="shelf__price">
+                  <small>MRP</small>
+                  <b class="num">₹55<i>/kg</i></b>
+                </span>
+                <span class="shelf__price shelf__price--loyal">
+                  <small>rapsap loyal</small>
+                  <b class="num">₹40<i>/kg</i></b>
+                </span>
+                <span class="shelf__price shelf__price--save">
+                  <small>you save</small>
+                  <b class="num">₹15</b>
+                </span>
+              </div>
+            </div>
+
+            <div class="shelf__aside">
+              <img class="shelf__shot" src="/banana-tag.webp"
+                   alt="A banana carrying the Rapsap price tag" width="1030" height="655" />
+              <div>
+                <div class="shelf__barcode" role="presentation"></div>
+                <div class="shelf__sku">RSP · 4917 · 0058</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hv1__cta">
+            <a class="btn btn--primary" href="/stores.html">find a store</a>
+            <a class="btn btn--ghost" href="/index.html#app">download the app</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="vswitch" aria-label="Hero variants">
+      <strong>hero</strong>
+      <a href="/hero-v1/" aria-current="page">01 shelf edge</a>
+      <a href="/hero-v2/">02 aisle</a>
+      <a href="/hero-v3/">03 receipt</a>
+      <a class="vswitch__spacer" href="/">← live homepage</a>
+    </nav>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>

@@ -14,7 +14,13 @@ export default defineConfig({
         privacy: resolve(__dirname, 'privacy-policy.html'),
         terms: resolve(__dirname, 'terms-conditions.html'),
         shipping: resolve(__dirname, 'shipping-policy.html'),
-        refund: resolve(__dirname, 'refund-policy.html')
+        refund: resolve(__dirname, 'refund-policy.html'),
+        contact: resolve(__dirname, 'contact-us-policy.html'),
+
+        // Hero explorations — noindex, remove these three once a direction is picked
+        heroV1: resolve(__dirname, 'hero-v1/index.html'),
+        heroV2: resolve(__dirname, 'hero-v2/index.html'),
+        heroV3: resolve(__dirname, 'hero-v3/index.html')
       }
     },
     // Copy public assets to dist

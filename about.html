@@ -1,367 +1,278 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>About — The hybrid supermarket</title>
     <meta name="author" content="Rapsap" />
     <meta
       name="description"
-      content="Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes. Get what you need, Rapsap!"
-    />
-    <meta name="keywords" content="Order, Groceries, Medicine, Rapsap" />
-
-    <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta
-      property="og:title"
-      content="Get Groceries, Medicines & More. Rapsap!"
-    />
-    <meta
-      property="og:description"
-      content="Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes. Get what you need, Rapsap!"
+      content="Kiranas offer proximity but not assortment. Quick-commerce offers speed but not experience. Rapsap was built to be both — a premium physical store with its own online quick delivery."
     />
 
+    <meta property="og:title" content="About Rapsap — The hybrid supermarket" />
+    <meta property="og:description" content="A premium physical store with its own online quick delivery." />
     <meta property="og:image" content="/meta.png" />
-    <meta property="og:url" content="https://rapsap.com/" />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Get Groceries, Medicines & More. Rapsap!"
-    />
-    <meta
-      name="twitter:description"
-      content="Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes. Get what you need, Rapsap!"
-    />
-    <meta name="twitter:image" content="/meta.png" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./src/style.css" />
+  </head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+  <body>
+    <a class="skip-link" href="#main">skip to content</a>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Rapsap</title>
-    <style>
-      html {
-        background: #000000;
-        height: 100%;
-      }
-      body {
-        background: #000000;
-        color: #ffffff;
-        min-height: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-      }
-      #app {
-        background: #000000;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-      main {
-        flex: 1;
-      }
-      .nav-items ul li a {
-        color: #ffffff;
-      }
-      .nav-items ul li a:hover {
-        color: #5074f3;
-      }
-      .logo-nav {
-        filter: brightness(0) invert(1);
-      }
-      .hamburger {
-        filter: brightness(0) invert(1);
-      }
-      .footer {
-        background: #111111;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .footer-logo {
-        filter: brightness(0) invert(1);
-      }
-      .footer-section h4 {
-        color: #ffffff;
-      }
-      .footer-links a {
-        color: #999;
-      }
-      .footer-links a:hover {
-        color: #ffffff;
-      }
-      @media screen and (max-width: 768px) {
-        main {
-          padding: 20px;
-        }
-        .nav-items {
-          background: #111111 !important;
-        }
-      }
-    </style>    <div id="app">
-      <nav class="navbar">
-        <a href="/">
-          <img src="/image-assets/rapsap-logo.svg" class="logo-nav" />
-        </a>
-
-        <img class="hamburger" id="hamburger-btn" src="/hamburgerMenu.svg" />
-
-        <div class="nav-items" id="nav-menu">
-          <ul>
-            <li><a href="/about.html" id="about-link">About</a></li>
-            <li><a href="/franchise.html" id="franchise-link">Franchise</a></li>
-            <li><a href="/stores.html" id="store-link">Stores</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <main class="about-container">
-        <div class="about-content left one">
-          <section class="detail">
-            <div class="highlighted-title">
-              <span class="typing"> WHY WE STARTED RAPSAP?</span>
-            </div>
-            <p class="description">
-              The idea for RapSap was born during the challenging times of the
-              Covid-19 lockdown. I saw firsthand how difficult it was for people
-              to access essential items, especially when markets were shut and
-              farmers had to destroy their crops due to a lack of demand.
-              Determined to make a difference, I launched RapSap to bridge this
-              gap and ensure that everyone had access to daily essentials.
-            </p>
-          </section>
-
-          <section class="title-container">
-            <img src="/brandLogo.svg" />
-            <p class="about-title">
-              About<br />
-              rapsap
-            </p>
-          </section>
-        </div>
-
-        <div class="about-content right">
-          <section class="detail">
-            <div class="highlighted-title">
-              <span class="typing">
-                Solving for Convenience and Experience</span
-              >
-            </div>
-            <p class="description">
-              At RapSap, we are committed to making your shopping experience
-              both convenient and enjoyable. We combine the ease of online
-              shopping with the assurance of a premium in-store experience. Our
-              hybrid superstore chain allows you to order essentials online with
-              fast delivery, or you can visit our stores for a hands-on shopping
-              experience. Our stores are designed to provide a seamless and
-              pleasant environment where you can find everything you need under
-              one roof.
-            </p>
-          </section>
-
-          <section class="title-container">
-            <img src="/brandLogo.svg" />
-            <p class="about-title">
-              About<br />
-              rapsap
-            </p>
-          </section>
-        </div>
-
-        <div class="about-content left">
-          <section class="detail">
-            <div class="highlighted-title">
-              <span class="typing"> All Essentials Under One Roof</span>
-            </div>
-            <p class="description">
-              RapSap stores are carefully curated to offer a wide range of
-              products, ensuring that all your needs are met. From groceries,
-              fruits, and vegetables to dairy, meat, beverages, snacks, personal
-              care, home utilities, and even medicines, we have it all. Our goal
-              is to provide high-quality products and an unparalleled shopping
-              experience, whether you choose to shop in-store or online.
-            </p>
-          </section>
-
-          <section class="title-container">
-            <img src="/brandLogo.svg" />
-            <p class="about-title">
-              About<br />
-              rapsap
-            </p>
-          </section>
-        </div>
-
-        <div class="about-content right" style="justify-content: center">
-          <section class="detail last">
-            <p class="last-section">
-              RapSap stores are carefully curated to offer a wide range of
-              products, ensuring that all your needs are met. From groceries,
-              fruits, and vegetables to dairy, meat, beverages, snacks, personal
-              care, home utilities, and even medicines, we have it all. Our goal
-              is to provide high-quality products and an unparalleled shopping
-              experience, whether you choose to shop in-store or online.
-            </p>
-            <br class="web-only" />
-            <br />
-            <p class="last-section-left">
-              Thank you for being a part of our journey. We look forward to
-              serving you and making RapSap your go-to destination for all your
-              essential needs.
-              <br class="web-only" />
-              <br />
-              With warm regards,
-              <br class="web-only" />
-              <br />
-            </p>
-            <p class="last-section-left">
-              <span class="name"> Siddhesh T. Ghuge</span><br />
-              Founder & CEO, RapSap
-            </p>
-          </section>
-
-          <section class="title-container">
-            <div
-              class="title-image-container"
-              style="display: flex; align-items: center"
-            >
-              <p class="last-section-title">
-                <span class="about-highlight">
-                  Our <span class="web-only">Vision</span>
-                </span>
-                <span class="mobile-only">Vision</span>
-
-                <br class="web-only" />
-                for the <br /><span class="about-highlight"> Future</span>
-              </p>
-
-              <!-- <img src="/brandLogo.svg" class="logo-last" /> -->
-            </div>
-          </section>
-        </div>
-      </main>
+    <div class="announce">
+      <span class="dot"></span>
+      now live at <strong>The Walk, Hiranandani Estate</strong> · Thane West — opening soon across Mumbai
     </div>
 
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-brand">
-          <img src="/image-assets/rapsap-logo.svg" alt="Rapsap" class="footer-logo" />
-          <p>Your hybrid superstore for groceries, dairy, fruits & medicines. Shop in-store or get essentials delivered in 10 minutes.</p>
-          <div class="footer-contact">
-            <p><a href="mailto:care@rapsap.com">care@rapsap.com</a></p>
-            <div class="footer-social">
-              <a href="https://bit.ly/481ErZr" target="_blank" rel="noopener noreferrer" title="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
-                </svg>
-              </a>
-              <a href="https://bit.ly/4mKqZO6" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a href="https://bit.ly/46mMEpO" target="_blank" rel="noopener noreferrer" title="Facebook">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </a>
-              <a href="https://bit.ly/3K2PO9w" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="header__logo" href="/index.html" aria-label="Rapsap home">
+          <img src="/logo.svg" alt="Rapsap" width="124" height="38" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="/stores.html">stores</a>
+          <a class="nav__link" href="/index.html#loyal">rapsap loyal</a>
+          <a class="nav__link" href="/index.html#categories">categories</a>
+          <a class="nav__link" href="/about.html">about</a>
+          <a class="nav__link" href="/franchise.html">partner with us</a>
+        </nav>
+        <div class="header__cta">
+          <a class="btn btn--ghost btn--sm" href="/stores.html">find a store</a>
+          <a class="btn btn--primary btn--sm" href="/index.html#app">download app</a>
+        </div>
+        <button class="burger" data-burger aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav" data-mobile-nav data-open="false">
+      <a class="mobile-nav__link" href="/stores.html">stores</a>
+      <a class="mobile-nav__link" href="/index.html#loyal">rapsap loyal</a>
+      <a class="mobile-nav__link" href="/index.html#categories">categories</a>
+      <a class="mobile-nav__link" href="/about.html">about</a>
+      <a class="mobile-nav__link" href="/franchise.html">partner with us</a>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/index.html#app">download the app</a>
+        <a class="btn btn--ghost" href="/stores.html">find a store</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- ================= PAGE HEAD ================= -->
+      <section class="page-head">
+        <div class="wrap">
+          <span class="eyebrow">about rapsap</span>
+          <h1 class="display display--lg">the hybrid<br />supermarket.</h1>
+          <p class="lede">
+            kiranas offer proximity but not assortment. quick-commerce offers speed but not experience.
+            rapsap was built to be both — a premium physical store with its own online quick delivery.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= WHY WE EXIST ================= -->
+      <section class="section">
+        <div class="wrap">
+          <div class="split">
+            <div class="split__media reveal">
+              <img src="/store-the-walk.webp" alt="Rapsap flagship storefront at The Walk, Hiranandani Estate" width="1280" height="800" loading="lazy" />
+            </div>
+            <div class="split__copy reveal" data-reveal-delay="100">
+              <span class="eyebrow">why rapsap exists</span>
+              <h2 class="display display--md">two halves of one shop.</h2>
+              <p class="body">
+                India's essentials retail is at an inflection point. customers want the trust and experience
+                of a premium store and the convenience of online delivery. most formats give you one or the other.
+              </p>
+              <p class="body mt-4">
+                rapsap brings both together: high-quality ambience, curated assortment and clear category
+                signage in store — seamlessly integrated with an app for quick fulfilment. premium experience,
+                everyday value, closer home.
+              </p>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="footer-section">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="/about.html">About Us</a></li>
-            <li><a href="/franchise.html">Franchise</a></li>
-            <li><a href="/stores.html">Our Stores</a></li>
-          </ul>
+      <!-- ================= PRINCIPLES ================= -->
+      <section class="section section--white">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">how we operate</span>
+            <h2 class="display display--md">our operating principles.</h2>
+          </div>
+
+          <div class="grid-3">
+            <article class="card card--hover reveal">
+              <h3 class="h-md">freshness</h3>
+              <p class="body">produce checked and rotated daily; nothing stays on the shelf past its best.</p>
+            </article>
+            <article class="card card--hover reveal" data-reveal-delay="60">
+              <h3 class="h-md">hygiene</h3>
+              <p class="body">one cleanliness standard, audited across every store, every shift.</p>
+            </article>
+            <article class="card card--hover reveal" data-reveal-delay="120">
+              <h3 class="h-md">smart pricing</h3>
+              <p class="body">premium presentation at everyday prices — savings shown, never hidden.</p>
+            </article>
+            <article class="card card--hover reveal">
+              <h3 class="h-md">speed</h3>
+              <p class="body">fast billing in store and quick fulfilment on the app.</p>
+            </article>
+            <article class="card card--hover reveal" data-reveal-delay="60">
+              <h3 class="h-md">trust</h3>
+              <p class="body">consistent quality, honest pricing and dependable service.</p>
+            </article>
+            <article class="card card--hover reveal" data-reveal-delay="120">
+              <h3 class="h-md">team excellence</h3>
+              <p class="body">trained, groomed, customer-first teams in every aisle.</p>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="footer-section">
-          <h4>Legal</h4>
-          <ul class="footer-links">
-            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
-            <li><a href="/shipping-policy.html">Shipping & Delivery</a></li>
-            <li><a href="/refund-policy.html">Refund & Cancellation</a></li>
-            <li><a href="/contact-us-policy.html">Contact Us</a></li>
-          </ul>
+      <!-- ================= LEADERSHIP ================= -->
+      <section class="section">
+        <div class="wrap wrap--narrow">
+          <span class="eyebrow center" style="text-align: center">leadership</span>
+          <blockquote class="quote mt-6 reveal">
+            <p>
+              “our goal is a best-in-class retail experience and a team that owns it — at every level,
+              in every aisle.”
+            </p>
+            <footer>
+              <b>Siddhesh T. Ghuge</b>
+              founder &amp; ceo, rapsap
+            </footer>
+          </blockquote>
         </div>
-      </div>
+      </section>
 
-      <div class="footer-bottom">
-        <p>&copy; 2025 Rapsap Essential Retail Pvt Ltd. All rights reserved.</p>
-        <p>Made with passion for your daily essentials</p>
+      <!-- ================= MILESTONES ================= -->
+      <section class="section section--subtle">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">milestones</span>
+            <h2 class="display display--md">how we got here.</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline__item reveal">
+              <div class="timeline__year num">2023</div>
+              <div>
+                <h3 class="timeline__t">rapsap is born</h3>
+                <p class="timeline__d">first store opens at Lodha Palava City, Mumbai — the hybrid supermarket idea goes live.</p>
+              </div>
+            </div>
+            <div class="timeline__item reveal">
+              <div class="timeline__year num">2024</div>
+              <div>
+                <h3 class="timeline__t">the model proves out</h3>
+                <p class="timeline__d">stores expand across high-density Thane &amp; Mumbai townships; café and bakery added in-store.</p>
+              </div>
+            </div>
+            <div class="timeline__item reveal">
+              <div class="timeline__year num">2025</div>
+              <div>
+                <h3 class="timeline__t">app &amp; quick delivery</h3>
+                <p class="timeline__d">the Rapsap app launches — the full aisle, store-backed, delivered quickly.</p>
+              </div>
+            </div>
+            <div class="timeline__item reveal">
+              <div class="timeline__year num">2025</div>
+              <div>
+                <h3 class="timeline__t">rapsap loyal</h3>
+                <p class="timeline__d">membership launches: 7% extra savings, in store and on the app.</p>
+              </div>
+            </div>
+            <div class="timeline__item reveal">
+              <div class="timeline__year num">2026</div>
+              <div>
+                <h3 class="timeline__t">the 5th flagship</h3>
+                <p class="timeline__d">5,500 sq ft flagship opens at The Walk, Hiranandani Estate — with more neighbourhoods to come.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+      <section class="section section--blue">
+        <div class="wrap cta-band">
+          <h2 class="display display--lg">sirf dikhta mehenga hai.</h2>
+          <p class="lede">premium for everyone — that's what rapsap loyal is for.</p>
+          <div class="btn-row">
+            <a class="btn btn--onBlue" href="/index.html#loyal">become rapsap loyal</a>
+            <a class="btn btn--onDarkGhost" href="/stores.html">find a store</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img src="/logo-light.svg" alt="Rapsap" width="124" height="38" />
+            <p class="footer__blurb">
+              a premium hybrid supermarket for modern neighbourhoods — shop in store or get essentials
+              delivered quickly to your door.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="/about.html">about rapsap</a></li>
+              <li><a href="/stores.html">stores</a></li>
+              <li><a href="/franchise.html">partner with us</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>customer</h4>
+            <ul>
+              <li><a href="/index.html#app">download the app</a></li>
+              <li><a href="/index.html#loyal">rapsap loyal</a></li>
+              <li><a href="/index.html#categories">categories</a></li>
+              <li><a href="/contact-us-policy.html">contact us</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>business</h4>
+            <ul>
+              <li><a href="/franchise.html">landlord partnerships</a></li>
+              <li><a href="/franchise.html">vendor partnerships</a></li>
+              <li><a href="/franchise.html">franchise enquiries</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>legal</h4>
+            <ul>
+              <li><a href="/privacy-policy.html">privacy policy</a></li>
+              <li><a href="/terms-conditions.html">terms &amp; conditions</a></li>
+              <li><a href="/shipping-policy.html">delivery policy</a></li>
+              <li><a href="/refund-policy.html">refund policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Rapsap Essential Retail Pvt Ltd. all rights reserved.</span>
+          <div class="footer__socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="X">X</a>
+            <a href="#" aria-label="Facebook">f</a>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <script>
-      const currentPage = window.location.pathname;
-
-      const aboutLink = document.getElementById("about-link");
-      const franchiseLink = document.getElementById("franchise-link");
-      const storeLink = document.getElementById("store-link");
-
-      const hamburgerBtn = document.getElementById("hamburger-btn");
-      const navMenu = document.getElementById("nav-menu");
-
-      if (franchiseLink && currentPage === "/franchise.html") {
-        franchiseLink.classList.add("active");
-      }
-      if (aboutLink && currentPage === "/about.html") {
-        aboutLink.classList.add("active");
-      }
-
-      if (storeLink && currentPage === "/stores.html") {
-        storeLink.classList.add("active");
-      }
-
-      if (hamburgerBtn) {
-        hamburgerBtn.addEventListener("click", function () {
-          if (navMenu) navMenu.classList.toggle("show");
-        });
-      }
-
-      // Scroll reveal animation for about content sections
-      const observerOptions = {
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, observerOptions);
-
-      // Observe all about-content elements
-      document.querySelectorAll('.about-content').forEach(content => {
-        observer.observe(content);
-      });
-    </script>
+    <script type="module" src="/script.js"></script>
   </body>
 </html>

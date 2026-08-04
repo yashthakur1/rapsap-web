@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+
+    <title>Hero v3 — Receipt — Rapsap</title>
+    <meta name="description" content="Hero design exploration: the itemised bill as hero, showing MRP against member price." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/hero-variants.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">skip to content</a>
+
+    <div class="announce">
+      <span class="dot"></span>
+      now live at <strong>The Walk, Hiranandani Estate</strong> · Thane West — opening soon across Mumbai
+    </div>
+
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="header__logo" href="/index.html" aria-label="Rapsap home">
+          <img src="/logo.svg" alt="Rapsap" width="124" height="38" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="/stores.html">stores</a>
+          <a class="nav__link" href="/index.html#loyal">rapsap loyal</a>
+          <a class="nav__link" href="/index.html#categories">categories</a>
+          <a class="nav__link" href="/about.html">about</a>
+          <a class="nav__link" href="/franchise.html">partner with us</a>
+        </nav>
+        <div class="header__cta">
+          <a class="btn btn--ghost btn--sm" href="/stores.html">find a store</a>
+          <a class="btn btn--primary btn--sm" href="/index.html#app">download app</a>
+        </div>
+        <button class="burger" data-burger aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav" data-mobile-nav data-open="false">
+      <a class="mobile-nav__link" href="/stores.html">stores</a>
+      <a class="mobile-nav__link" href="/index.html#loyal">rapsap loyal</a>
+      <a class="mobile-nav__link" href="/index.html#categories">categories</a>
+      <a class="mobile-nav__link" href="/about.html">about</a>
+      <a class="mobile-nav__link" href="/franchise.html">partner with us</a>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/index.html#app">download the app</a>
+        <a class="btn btn--ghost" href="/stores.html">find a store</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hv3">
+        <div class="wrap hv3__inner">
+          <div>
+            <span class="eyebrow eyebrow--blue">the weekly shop, itemised</span>
+            <h1 class="hv3__line">
+              we show <span class="accent">our working.</span>
+            </h1>
+            <p class="hv3__sub">
+              every line on your bill carries the printed price and what you actually paid.
+              premium aisles, honest arithmetic — check it yourself at the counter.
+            </p>
+            <div class="hv3__cta">
+              <a class="btn btn--primary" href="/stores.html">find a store</a>
+              <a class="btn btn--ghost" href="/index.html#loyal">how rapsap loyal works</a>
+            </div>
+          </div>
+
+          <!-- the bill: MRP struck through, member price paid, total kept -->
+          <div class="receipt">
+            <div class="receipt__head">
+              <img src="/logo.svg" alt="Rapsap" width="124" height="38" />
+              <p class="receipt__where">the walk · hiranandani estate<br />thane west · 400607</p>
+            </div>
+
+            <div class="receipt__rule"></div>
+
+            <div class="receipt__items">
+              <div class="receipt__item">
+                <span>atta · 5 kg</span>
+                <span class="receipt__was num">₹310</span>
+                <span class="receipt__now num">₹288</span>
+              </div>
+              <div class="receipt__item">
+                <span>toor dal · 1 kg</span>
+                <span class="receipt__was num">₹186</span>
+                <span class="receipt__now num">₹173</span>
+              </div>
+              <div class="receipt__item">
+                <span>robusta bananas · 1 kg</span>
+                <span class="receipt__was num">₹55</span>
+                <span class="receipt__now num">₹40</span>
+              </div>
+              <div class="receipt__item">
+                <span>full cream milk · 2 L</span>
+                <span class="receipt__was num">₹142</span>
+                <span class="receipt__now num">₹132</span>
+              </div>
+              <div class="receipt__item">
+                <span>fresh broccoli · 500 g</span>
+                <span class="receipt__was num">₹70</span>
+                <span class="receipt__now num">₹65</span>
+              </div>
+              <div class="receipt__item">
+                <span>… 34 more items</span>
+                <span class="receipt__was num">₹3,237</span>
+                <span class="receipt__now num">₹3,022</span>
+              </div>
+            </div>
+
+            <div class="receipt__rule"></div>
+
+            <div class="receipt__totals">
+              <div class="receipt__total"><span>total at MRP</span><b class="num">₹4,000</b></div>
+              <div class="receipt__total"><span>rapsap loyal price</span><b class="num">₹3,720</b></div>
+              <div class="receipt__total receipt__total--saved">
+                <span>you kept</span><b class="num">₹280</b>
+              </div>
+            </div>
+
+            <p class="receipt__stamp">39 items · member since 2026<br />sirf dikhta mehenga hai</p>
+            <div class="receipt__barcode" role="presentation"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="vswitch" aria-label="Hero variants">
+      <strong>hero</strong>
+      <a href="/hero-v1/">01 shelf edge</a>
+      <a href="/hero-v2/">02 aisle</a>
+      <a href="/hero-v3/" aria-current="page">03 receipt</a>
+      <a class="vswitch__spacer" href="/">← live homepage</a>
+    </nav>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>

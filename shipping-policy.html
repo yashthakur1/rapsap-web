@@ -1,332 +1,197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Shipping & Delivery Policy - Rapsap</title>
     <meta name="author" content="Rapsap" />
-    <meta
-      name="description"
-      content="Shipping and Delivery Policy for Rapsap - Fast, reliable delivery within 10-60 minutes."
-    />
-    <meta name="keywords" content="Shipping Policy, Delivery, Fast Delivery, Rapsap" />
+    <meta name="description" content="Shipping and Delivery Policy for Rapsap - Fast, reliable delivery within 10-60 minutes." />
 
-    <link rel="stylesheet" href="./src/style.css" />
+    <meta property="og:title" content="Shipping & Delivery Policy - Rapsap" />
+    <meta property="og:description" content="Shipping and Delivery Policy for Rapsap - Fast, reliable delivery within 10-60 minutes." />
+    <meta property="og:image" content="/meta.png" />
+    <meta property="og:type" content="website" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Shipping & Delivery Policy - Rapsap</title>
-    <style>
-      html {
-        background: #000000;
-      }
-      body {
-        background: #000000;
-        color: #ffffff;
-        min-height: 100vh;
-        margin: 0;
-        padding: 0;
-      }
-      #app {
-        min-height: 100vh;
-        background: #000000;
-      }
-      .policy-container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 40px 60px;
-        text-align: left;
-        height: calc(100vh - 160px);
-        overflow-y: auto;
-        overflow-x: hidden;
-      }
-      .policy-container::-webkit-scrollbar {
-        width: 8px;
-      }
-      .policy-container::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 4px;
-      }
-      .policy-container::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 4px;
-      }
-      .policy-container::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
-      .policy-header {
-        text-align: center;
-        margin-bottom: 40px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .policy-title {
-        font-size: 48px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        color: #ffffff;
-      }
-      .effective-date {
-        color: #999;
-        font-size: 16px;
-      }
-      .policy-section {
-        margin-bottom: 30px;
-        line-height: 1.8;
-      }
-      .policy-section h2 {
-        color: #ffffff;
-        font-size: 24px;
-        margin-bottom: 15px;
-        margin-top: 30px;
-      }
-      .policy-section p {
-        color: #cccccc;
-        font-size: 16px;
-        margin-bottom: 15px;
-      }
-      .policy-section ul {
-        color: #cccccc;
-        padding-left: 30px;
-        margin-bottom: 15px;
-      }
-      .policy-section li {
-        margin-bottom: 8px;
-      }
-      .policy-section strong {
-        color: #ffffff;
-      }
-      .delivery-highlight {
-        background: rgba(80, 116, 243, 0.1);
-        padding: 20px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        border-left: 4px solid #5074f3;
-      }
-      .delivery-highlight h3 {
-        color: #5074f3;
-        margin-top: 0;
-        margin-bottom: 10px;
-      }
-      .contact-section {
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .contact-section h2 {
-        color: #ffffff;
-        font-size: 24px;
-        margin-bottom: 15px;
-      }
-      .contact-section p {
-        color: #cccccc;
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
-      .contact-section a {
-        color: #5074f3;
-        text-decoration: none;
-      }
-      .contact-section a:hover {
-        text-decoration: underline;
-      }
-      .nav-items ul li a {
-        color: #ffffff;
-      }
-      .nav-items ul li a:hover {
-        color: #5074f3;
-      }
-      .logo-nav {
-        filter: brightness(0) invert(1);
-      }
-      .hamburger {
-        filter: brightness(0) invert(1);
-      }
-      .footer {
-        background: #111111;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        margin-top: 60px;
-      }
-      .footer-logo {
-        filter: brightness(0) invert(1);
-      }
-      .navbar {
-        padding: 20px 60px;
-        position: sticky;
-        top: 0;
-        background: #000000;
-        z-index: 100;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      @media screen and (max-width: 768px) {
-        .policy-container {
-          padding: 30px 30px;
-          height: calc(100vh - 140px);
-        }
-        .policy-title {
-          font-size: 32px;
-        }
-        .policy-section h2 {
-          font-size: 20px;
-        }
-        .nav-items {
-          background: #111111 !important;
-        }
-        .navbar {
-          padding: 20px 30px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
+
   <body>
-    <nav class="navbar">
-      <a href="/">
-        <img src="/image-assets/rapsap-logo.svg" class="logo-nav" />
-      </a>
+    <a class="skip-link" href="#main">skip to content</a>
 
-      <img class="hamburger" id="hamburger-btn" src="/hamburgerMenu.svg" />
+    <div class="announce">
+      <span class="dot"></span>
+      now live at <strong>The Walk, Hiranandani Estate</strong> · Thane West — opening soon across Mumbai
+    </div>
 
-      <div class="nav-items" id="nav-menu">
-        <ul>
-          <li><a href="/about.html" id="about-link">About</a></li>
-          <li><a href="/franchise.html" id="franchise-link">Franchise</a></li>
-          <li><a href="/stores.html" id="store-link">Stores</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="policy-container">
-      <div class="policy-content-wrapper">
-        <div class="policy-header">
-          <h1 class="policy-title">Shipping and Delivery Policy</h1>
-          <p class="effective-date">Effective Date: 20th August, 2025</p>
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="header__logo" href="/index.html" aria-label="Rapsap home">
+          <img src="/logo.svg" alt="Rapsap" width="124" height="38" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="/stores.html">stores</a>
+          <a class="nav__link" href="/index.html#loyal">rapsap loyal</a>
+          <a class="nav__link" href="/index.html#categories">categories</a>
+          <a class="nav__link" href="/about.html">about</a>
+          <a class="nav__link" href="/franchise.html">partner with us</a>
+        </nav>
+        <div class="header__cta">
+          <a class="btn btn--ghost btn--sm" href="/stores.html">find a store</a>
+          <a class="btn btn--primary btn--sm" href="/index.html#app">download app</a>
         </div>
-
-      <div class="policy-section">
-        <p>At Rapsap Essential Retail Pvt Ltd, we are committed to providing fast, reliable, and hygienic deliveries across all our serviceable locations. This Shipping and Delivery Policy outlines the terms under which we process and deliver your orders.</p>
+        <button class="burger" data-burger aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+          <span></span>
+        </button>
       </div>
+    </header>
 
-      <div class="policy-section">
-        <h2>1. Delivery Areas</h2>
-        <p>We currently serve specific pin codes and zones where Rapsap stores are operational. You can check service availability for your area by entering your delivery address on the Rapsap app or website.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2>2. Delivery Timelines</h2>
-        
-        <div class="delivery-highlight">
-          <h3>2.1 Express Delivery</h3>
-          <p>We aim to deliver all eligible orders within <strong>10 to 60 minutes</strong>, depending on your location, item availability, and order volume.</p>
-        </div>
-
-        <h3>2.2 Standard Delivery</h3>
-        <p>In case of bulk or special orders (e.g. large packs, wholesale SKUs), delivery may take up to 1–2 hours, and you will be notified at the time of order confirmation.</p>
-
-        <h3>2.3 Delays</h3>
-        <p>Deliveries may be delayed due to:</p>
-        <ul>
-          <li>Unforeseen traffic or weather conditions</li>
-          <li>High demand or festival rush</li>
-          <li>Technical errors or payment confirmation delays</li>
-        </ul>
-        <p>In such cases, our customer support team will proactively update you.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2>3. Delivery Charges</h2>
-        <ul>
-          <li><strong>Free Delivery</strong> for all orders above the minimum cart value (visible at checkout).</li>
-          <li>Orders below the minimum value may attract a nominal delivery fee, mentioned during checkout.</li>
-          <li>Delivery charges are non-refundable unless an order qualifies for a full refund.</li>
-        </ul>
-      </div>
-
-      <div class="policy-section">
-        <h2>4. Order Tracking</h2>
-        <p>You can track your order status in real-time through the Rapsap app, including:</p>
-        <ul>
-          <li>Order confirmation</li>
-          <li>Packing status</li>
-          <li>Delivery rider assignment</li>
-          <li>Live location of delivery</li>
-        </ul>
-        <p>Push notifications and SMS alerts are also sent to keep you updated.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2>5. Missed Deliveries</h2>
-        <p>If you miss a delivery attempt due to unavailability:</p>
-        <ul>
-          <li>Our delivery executive will attempt to call you</li>
-          <li>After 2 failed attempts, the order will be marked undeliverable and may be cancelled</li>
-          <li>Prepaid orders will be refunded as per our Refund Policy</li>
-        </ul>
-      </div>
-
-      <div class="policy-section">
-        <h2>6. Packaging and Handling</h2>
-        <p>All orders are packed at Rapsap stores using hygienic, tamper-proof, and category-appropriate packaging (e.g., cold chain for frozen goods, sealed pouches for dry groceries, etc.)</p>
-        <p>We follow stringent handling standards to ensure freshness and safety until it reaches your doorstep.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2>7. Delivery Issues or Complaints</h2>
-        <p>If your order is:</p>
-        <ul>
-          <li>Incomplete</li>
-          <li>Incorrect</li>
-          <li>Damaged</li>
-          <li>Or marked Delivered but not received</li>
-        </ul>
-        <p>Please contact us within 24 hours of delivery with supporting images/videos. We will investigate and resolve it promptly.</p>
-      </div>
-
-      <div class="contact-section">
-        <h2>8. Contact Us</h2>
-        <p>For delivery-related assistance or feedback, reach out to:</p>
-        <p>Email: <a href="mailto:care@rapsap.com">care@rapsap.com</a></p>
-        <p><strong>Rapsap Essential Retail Pvt Ltd</strong></p>
-        <p>We're available 9 AM – 9 PM every day.</p>
-      </div>
+    <div class="mobile-nav" id="mobile-nav" data-mobile-nav data-open="false">
+      <a class="mobile-nav__link" href="/stores.html">stores</a>
+      <a class="mobile-nav__link" href="/index.html#loyal">rapsap loyal</a>
+      <a class="mobile-nav__link" href="/index.html#categories">categories</a>
+      <a class="mobile-nav__link" href="/about.html">about</a>
+      <a class="mobile-nav__link" href="/franchise.html">partner with us</a>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/index.html#app">download the app</a>
+        <a class="btn btn--ghost" href="/stores.html">find a store</a>
       </div>
     </div>
 
-    <script>
-      const hamburgerBtn = document.getElementById("hamburger-btn");
-      const navMenu = document.getElementById("nav-menu");
+    <main id="main">
+      <section class="page-head">
+        <div class="wrap">
+          <span class="eyebrow">legal</span>
+          <h1 class="display display--md">shipping and delivery policy</h1>
+          <p class="body-sm">Effective Date: 20th August, 2025</p>
+        </div>
+      </section>
 
-      if (hamburgerBtn) {
-        hamburgerBtn.addEventListener("click", function () {
-          if (navMenu) navMenu.classList.toggle("show");
-        });
-      }
+      <section class="section">
+        <div class="wrap">
+          <div class="prose">
+            <p>At Rapsap Essential Retail Pvt Ltd, we are committed to providing fast, reliable, and hygienic deliveries across all our serviceable locations. This Shipping and Delivery Policy outlines the terms under which we process and deliver your orders.</p>
+            <h2>1. Delivery Areas</h2>
+            <p>We currently serve specific pin codes and zones where Rapsap stores are operational. You can check service availability for your area by entering your delivery address on the Rapsap app or website.</p>
+            <h2>2. Delivery Timelines</h2>
+            <div class="delivery-highlight">
+            <h3>2.1 Express Delivery</h3>
+            <p>We aim to deliver all eligible orders within <strong>10 to 60 minutes</strong>, depending on your location, item availability, and order volume.</p>
+            </div>
+            <h3>2.2 Standard Delivery</h3>
+            <p>In case of bulk or special orders (e.g. large packs, wholesale SKUs), delivery may take up to 1–2 hours, and you will be notified at the time of order confirmation.</p>
+            <h3>2.3 Delays</h3>
+            <p>Deliveries may be delayed due to:</p>
+            <ul>
+            <li>Unforeseen traffic or weather conditions</li>
+            <li>High demand or festival rush</li>
+            <li>Technical errors or payment confirmation delays</li>
+            </ul>
+            <p>In such cases, our customer support team will proactively update you.</p>
+            <h2>3. Delivery Charges</h2>
+            <ul>
+            <li><strong>Free Delivery</strong> for all orders above the minimum cart value (visible at checkout).</li>
+            <li>Orders below the minimum value may attract a nominal delivery fee, mentioned during checkout.</li>
+            <li>Delivery charges are non-refundable unless an order qualifies for a full refund.</li>
+            </ul>
+            <h2>4. Order Tracking</h2>
+            <p>You can track your order status in real-time through the Rapsap app, including:</p>
+            <ul>
+            <li>Order confirmation</li>
+            <li>Packing status</li>
+            <li>Delivery rider assignment</li>
+            <li>Live location of delivery</li>
+            </ul>
+            <p>Push notifications and SMS alerts are also sent to keep you updated.</p>
+            <h2>5. Missed Deliveries</h2>
+            <p>If you miss a delivery attempt due to unavailability:</p>
+            <ul>
+            <li>Our delivery executive will attempt to call you</li>
+            <li>After 2 failed attempts, the order will be marked undeliverable and may be cancelled</li>
+            <li>Prepaid orders will be refunded as per our Refund Policy</li>
+            </ul>
+            <h2>6. Packaging and Handling</h2>
+            <p>All orders are packed at Rapsap stores using hygienic, tamper-proof, and category-appropriate packaging (e.g., cold chain for frozen goods, sealed pouches for dry groceries, etc.)</p>
+            <p>We follow stringent handling standards to ensure freshness and safety until it reaches your doorstep.</p>
+            <h2>7. Delivery Issues or Complaints</h2>
+            <p>If your order is:</p>
+            <ul>
+            <li>Incomplete</li>
+            <li>Incorrect</li>
+            <li>Damaged</li>
+            <li>Or marked Delivered but not received</li>
+            </ul>
+            <p>Please contact us within 24 hours of delivery with supporting images/videos. We will investigate and resolve it promptly.</p>
+            <h2>8. Contact Us</h2>
+            <p>For delivery-related assistance or feedback, reach out to:</p>
+            <p>Email: <a href="mailto:care@rapsap.com">care@rapsap.com</a></p>
+            <p><strong>Rapsap Essential Retail Pvt Ltd</strong></p>
+            <p>We're available 9 AM – 9 PM every day.</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-      // Add scroll animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img src="/logo-light.svg" alt="Rapsap" width="124" height="38" />
+            <p class="footer__blurb">
+              a premium hybrid supermarket for modern neighbourhoods — shop in store or get essentials
+              delivered quickly to your door.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="/about.html">about rapsap</a></li>
+              <li><a href="/stores.html">stores</a></li>
+              <li><a href="/franchise.html">partner with us</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>customer</h4>
+            <ul>
+              <li><a href="/index.html#app">download the app</a></li>
+              <li><a href="/index.html#loyal">rapsap loyal</a></li>
+              <li><a href="/index.html#categories">categories</a></li>
+              <li><a href="/contact-us-policy.html">contact us</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>business</h4>
+            <ul>
+              <li><a href="/franchise.html">landlord partnerships</a></li>
+              <li><a href="/franchise.html">vendor partnerships</a></li>
+              <li><a href="/franchise.html">franchise enquiries</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>legal</h4>
+            <ul>
+              <li><a href="/privacy-policy.html">privacy policy</a></li>
+              <li><a href="/terms-conditions.html">terms &amp; conditions</a></li>
+              <li><a href="/shipping-policy.html">delivery policy</a></li>
+              <li><a href="/refund-policy.html">refund policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Rapsap Essential Retail Pvt Ltd. all rights reserved.</span>
+          <div class="footer__socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="X">X</a>
+            <a href="#" aria-label="Facebook">f</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('.policy-section').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'all 0.6s ease-out';
-        observer.observe(section);
-      });
-    </script>
+    <script type="module" src="/script.js"></script>
   </body>
 </html>
