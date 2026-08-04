@@ -23,7 +23,10 @@ export default defineConfig({
         heroV3: resolve(__dirname, 'hero-v3/index.html'),
 
         // Built strictly to the Website Brief (Bricolage/Jakarta, black-led) — noindex
-        docVer: resolve(__dirname, 'doc-ver/index.html')
+        docVer: resolve(__dirname, 'doc-ver/index.html'),
+        docVerAbout: resolve(__dirname, 'doc-ver/about/index.html'),
+        docVerStores: resolve(__dirname, 'doc-ver/stores/index.html'),
+        docVerPartners: resolve(__dirname, 'doc-ver/partners/index.html')
       }
     },
     // Copy public assets to dist

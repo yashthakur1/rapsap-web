@@ -1,110 +1,112 @@
 /* ==========================================================================
-   RAPSAP — "doc-ver": built strictly to the Website Brief.
-   Self-contained: does NOT load style.css, because the brief specifies
-   different fonts and a black-led palette.
+   RAPSAP — "doc-ver": built to the Website Brief.
+   Self-contained: does NOT load style.css (the brief specifies different
+   fonts and a black-led palette).
 
-   Brief constraints honoured here:
-     · Black is the brand. Green is accent only, used sparingly.
-     · Headlines Bricolage Grotesque, body Plus Jakarta Sans.
+   Brief constraints honoured:
+     · Black is the brand. Green is accent only, sparingly.
+     · Bricolage Grotesque headlines, Plus Jakarta Sans body.
      · No animations or heavy effects.
-     · Nothing in the hero but headline, one line, two buttons.
+     · Hero: headline, one line, two buttons. No stats, no store count.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,500;12..96,75..100,600;12..96,75..100,700;12..96,75..100,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Black is the brand */
   --ink:        #0B0B0C;
-  --ink-soft:   #1C1C1E;
-  --muted:      #6B6B70;
-  --faint:      #9B9BA0;
-  --line:       #E4E4E1;
+  --ink-2:      #17171A;
+  --muted:      #62626A;
+  --faint:      #9A9AA2;
+  --line:       #E6E6E3;
+  --line-2:     #F0F0ED;
   --paper:      #FFFFFF;
-  --paper-2:    #F7F7F5;
+  --paper-2:    #F7F7F4;
 
-  /* Accent — sparing, per brief */
+  /* accent — sparing, per brief */
   --green:      #03926E;
-  --green-soft: #E6F4EF;
+  --green-soft: #E8F4F0;
 
   --display: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
   --body:    'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 
-  --wrap: 1120px;
+  --wrap: 1180px;
   --gutter: 24px;
-  --nav-h: 72px;
+  --nav-h: 76px;
+  --r: 14px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 96px; }
 
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font: 400 17px/1.6 var(--body);
+  font: 400 17px/1.62 var(--body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
 img, svg { display: block; max-width: 100%; }
-h1, h2, h3, p { margin: 0; }
+h1, h2, h3, h4, p, figure { margin: 0; }
 ul { margin: 0; padding: 0; list-style: none; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
-
-:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 3px; }
 
 .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+.wrap--tight { max-width: 900px; }
 
-.skip {
-  position: absolute; left: -9999px; top: 0; z-index: 100;
-  background: var(--ink); color: #fff; padding: 12px 18px; font-weight: 600;
-}
+.skip { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: #fff; padding: 12px 18px; font-weight: 600; }
 .skip:focus { left: 0; }
 
 /* --------------------------------------------------------------------------
-   Type
+   Type — Bricolage Grotesque carries the personality; tight, confident.
    -------------------------------------------------------------------------- */
 .h1 {
   font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(40px, 6.2vw, 76px);
-  line-height: 1.02;
-  letter-spacing: -0.035em;
+  font-weight: 700; font-variation-settings: 'wdth' 96;
+  font-size: clamp(42px, 6.4vw, 82px);
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 .h2 {
   font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(28px, 3.4vw, 42px);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  font-weight: 700; font-variation-settings: 'wdth' 96;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 .h3 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 20px;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
+  font-size: clamp(19px, 1.6vw, 23px);
+  line-height: 1.22;
+  letter-spacing: -0.022em;
 }
-.lead { font-size: clamp(17px, 1.7vw, 20px); line-height: 1.55; color: var(--muted); }
-.small { font-size: 14px; color: var(--muted); }
+.h4 { font: 600 17px/1.3 var(--body); letter-spacing: -0.01em; }
+
+.lead { font-size: clamp(18px, 1.8vw, 21px); line-height: 1.55; color: var(--muted); text-wrap: pretty; }
+.body { color: var(--muted); text-wrap: pretty; }
+.small { font-size: 14px; line-height: 1.5; color: var(--muted); }
 
 .eyebrow {
+  display: block;
   font: 600 12px/1 var(--body);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--faint);
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint);
 }
+.num { font-variant-numeric: tabular-nums; }
 
 /* --------------------------------------------------------------------------
    Buttons
    -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-  height: 50px; padding-inline: 26px;
-  border-radius: 8px;
+  height: 52px; padding-inline: 27px;
+  border-radius: 9px;
   font: 600 15px/1 var(--body);
   border: 1.5px solid transparent;
   transition: background .18s ease, color .18s ease, border-color .18s ease;
@@ -114,162 +116,233 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .btn--outline { border-color: var(--ink); color: var(--ink); }
 .btn--outline:hover { background: var(--ink); color: #fff; }
 .btn--onDark { background: #fff; color: var(--ink); }
-.btn--onDark:hover { background: #EDEDEA; }
+.btn--onDark:hover { background: #E9E9E5; }
+.btn--ghostDark { border-color: rgba(255,255,255,.4); color: #fff; }
+.btn--ghostDark:hover { background: rgba(255,255,255,.1); }
 .btn--sm { height: 42px; padding-inline: 18px; font-size: 14px; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
+.link {
+  display: inline-flex; align-items: center; gap: 7px;
+  font: 600 15px/1 var(--body);
+  border-bottom: 1.5px solid var(--ink); padding-bottom: 3px;
+}
+.link:hover { color: var(--muted); border-color: var(--muted); }
+
 /* --------------------------------------------------------------------------
-   Nav — brief: logo left; About | Stores | Partner With Us;
-   WhatsApp (outline) + Get the App (black filled); hamburger on mobile.
+   Nav
    -------------------------------------------------------------------------- */
 .nav {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(255,255,255,.92);
-  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.94);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
 .nav__in { height: var(--nav-h); display: flex; align-items: center; gap: 36px; }
-.nav__logo img { height: 26px; width: auto; }
-.nav__links { display: flex; gap: 30px; margin-left: auto; }
-.nav__links a { font: 500 15px/1 var(--body); color: var(--ink); }
+.nav__logo img { height: 27px; width: auto; }
+.nav__links { display: flex; gap: 32px; margin-left: auto; }
+.nav__links a { font: 500 15px/1 var(--body); }
 .nav__links a:hover { color: var(--muted); }
+.nav__links a[aria-current='page'] { font-weight: 600; }
 .nav__cta { display: flex; gap: 10px; }
 
 .burger { display: none; width: 44px; height: 44px; margin-left: auto; align-items: center; justify-content: center; }
-.burger span, .burger span::before, .burger span::after {
-  display: block; width: 22px; height: 2px; background: var(--ink); position: relative;
-}
+.burger span, .burger span::before, .burger span::after { display: block; width: 22px; height: 2px; background: var(--ink); position: relative; }
 .burger span::before, .burger span::after { content: ''; position: absolute; left: 0; }
 .burger span::before { top: -7px; } .burger span::after { top: 7px; }
 
-.mnav {
-  display: none;
-  border-bottom: 1px solid var(--line);
-  background: var(--paper);
-  padding: 12px var(--gutter) 24px;
-}
+.mnav { display: none; border-bottom: 1px solid var(--line); background: var(--paper); padding: 12px var(--gutter) 26px; }
 .mnav[data-open='true'] { display: block; }
-.mnav a { display: block; padding: 13px 0; font: 600 18px/1 var(--body); border-bottom: 1px solid var(--line); }
-.mnav .btn-row { margin-top: 20px; }
+.mnav a { display: block; padding: 14px 0; font: 600 19px/1 var(--body); border-bottom: 1px solid var(--line); }
+.mnav .btn-row { margin-top: 22px; }
 .mnav .btn { flex: 1; }
 
 /* --------------------------------------------------------------------------
-   Hero — brief: "Nothing else in the hero. No stats, no store count."
+   Hero — type only, per brief. Weight comes from scale and space.
    -------------------------------------------------------------------------- */
-.hero { padding-block: clamp(64px, 10vw, 132px) clamp(56px, 8vw, 104px); }
-.hero .h1 { max-width: 17ch; }
-.hero .lead { margin-top: 22px; max-width: 46ch; }
-.hero .btn-row { margin-top: 36px; }
+.hero { padding-block: clamp(72px, 11vw, 150px) clamp(52px, 7vw, 88px); }
+.hero .h1 { max-width: 16ch; }
+.hero .lead { margin-top: 24px; max-width: 42ch; font-size: clamp(19px, 2vw, 23px); color: var(--ink-2); }
+.hero .btn-row { margin-top: 38px; }
+
+/* Full-bleed store photograph directly beneath the hero */
+.showcase { position: relative; }
+.showcase img { width: 100%; height: clamp(320px, 46vw, 580px); object-fit: cover; }
+.showcase__cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 26px var(--gutter);
+  background: linear-gradient(to top, rgba(11,11,12,.82), transparent);
+  color: #fff;
+}
+.showcase__cap span {
+  max-width: var(--wrap); margin-inline: auto; display: block;
+  font: 500 14px/1.4 var(--body);
+}
 
 /* --------------------------------------------------------------------------
-   Township presence — trust signal, text only, understated
+   Township presence — trust signal, text only
    -------------------------------------------------------------------------- */
-.township {
-  border-block: 1px solid var(--line);
-  padding-block: 30px;
-  background: var(--paper-2);
-}
+.township { border-bottom: 1px solid var(--line); padding-block: clamp(36px, 4.5vw, 56px); background: var(--paper); }
 .township__line { font-size: 15px; color: var(--muted); }
-.township__row {
-  display: flex; flex-wrap: wrap; align-items: center;
-  gap: 10px 22px;
-  margin-top: 14px;
-}
+.township__row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; margin-top: 18px; }
 .township__row span {
-  font-family: var(--display);
-  font-weight: 600; font-size: clamp(16px, 1.9vw, 21px);
-  letter-spacing: -0.02em;
-  color: var(--ink);
+  font-family: var(--display); font-weight: 600;
+  font-size: clamp(18px, 2.2vw, 26px); letter-spacing: -0.025em;
 }
-.township__row i { color: var(--line); font-style: normal; }
+.township__row i { color: var(--line); font-style: normal; font-size: 20px; }
 
 /* --------------------------------------------------------------------------
    Sections
    -------------------------------------------------------------------------- */
-.sec { padding-block: clamp(56px, 7.5vw, 104px); }
+.sec { padding-block: clamp(64px, 8vw, 116px); }
 .sec--alt { background: var(--paper-2); }
-.sec__head { margin-bottom: clamp(28px, 4vw, 48px); }
-.sec__head .h2 { margin-top: 10px; }
+.sec--dark { background: var(--ink); color: #fff; }
+.sec--dark .h2, .sec--dark .h3 { color: #fff; }
+.sec--dark .lead, .sec--dark .body { color: rgba(255,255,255,.68); }
+.sec--dark .eyebrow { color: rgba(255,255,255,.5); }
 
-/* What we carry — brief: emoji + name, that's it */
-.cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.sec__head { max-width: 62ch; margin-bottom: clamp(34px, 4.5vw, 60px); }
+.sec__head .h2 { margin-top: 12px; }
+.sec__head .lead { margin-top: 18px; }
+
+/* What we carry — emoji + name, per brief, but given proper presence */
+.cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .cat {
-  display: flex; align-items: center; gap: 14px;
-  padding: 20px;
+  display: flex; flex-direction: column; gap: 16px;
+  padding: 26px 24px 24px;
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: var(--r);
+  transition: border-color .18s ease, box-shadow .18s ease;
 }
-.sec--alt .cat { background: var(--paper); }
-.cat span { font-size: 26px; line-height: 1; }
-.cat b { font: 600 16px/1.3 var(--body); }
+.cat:hover { border-color: var(--ink); box-shadow: 0 8px 22px rgba(11,11,12,.06); }
+.cat__ico {
+  width: 52px; height: 52px; border-radius: 11px;
+  background: var(--paper-2); display: grid; place-items: center; font-size: 26px;
+}
+.sec--alt .cat__ico { background: var(--line-2); }
+.cat b { font: 600 17px/1.3 var(--body); letter-spacing: -0.01em; }
 
-/* Why Rapsap — four blocks, heading + two lines */
-.why { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(28px, 4vw, 56px); }
-.why__item { padding-top: 22px; border-top: 2px solid var(--ink); }
-.why__item p { margin-top: 10px; color: var(--muted); font-size: 16px; }
+/* Why Rapsap — four blocks, numbered rules give the grid structure */
+.why { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(30px, 4vw, 60px); }
+.why__item { padding-top: 26px; border-top: 2px solid var(--ink); }
+.why__item .h3 { margin-top: 4px; }
+.why__item p { margin-top: 12px; color: var(--muted); font-size: 16.5px; }
+.why__n { font: 600 12px/1 var(--body); letter-spacing: .16em; color: var(--faint); }
+.sec--dark .why__item { border-top-color: rgba(255,255,255,.85); }
+.sec--dark .why__item p { color: rgba(255,255,255,.66); }
+.sec--dark .why__n { color: rgba(255,255,255,.45); }
 
-/* App CTA — black section */
-.app { background: var(--ink); color: #fff; padding-block: clamp(56px, 8vw, 104px); text-align: center; }
-.app .h2 { color: #fff; }
-.app__badges { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 34px; }
+/* Split — image beside copy */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 76px); align-items: center; }
+.split--rev .split__media { order: 2; }
+.split__media { border-radius: var(--r); overflow: hidden; background: var(--paper-2); aspect-ratio: 4/3; }
+.split__media img { width: 100%; height: 100%; object-fit: cover; }
+.split__copy .h2 { margin-top: 12px; }
+.split__copy .lead { margin-top: 18px; }
+.split__copy .btn-row, .split__copy .link { margin-top: 28px; }
+
+/* Statements — the three "what we are" lines */
+.statements { display: grid; gap: 0; margin-top: 8px; }
+.statement { display: grid; grid-template-columns: 210px 1fr; gap: clamp(20px, 4vw, 48px); padding-block: clamp(24px, 3vw, 34px); border-top: 1px solid var(--line); align-items: start; }
+.statement:last-child { border-bottom: 1px solid var(--line); }
+.statement__k { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.4vw, 30px); letter-spacing: -0.03em; }
+.statement__v { color: var(--muted); font-size: 16.5px; }
+
+/* Store cards — name, community, address, phone, directions, live badge */
+.stores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.store {
+  display: flex; flex-direction: column;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden;
+}
+.store__media { aspect-ratio: 16/10; background: var(--paper-2); }
+.store__media img { width: 100%; height: 100%; object-fit: cover; }
+.store__body { padding: 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.store__name { font-family: var(--display); font-weight: 700; font-size: 21px; letter-spacing: -0.028em; line-height: 1.15; }
+.store__dev { font: 600 12px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
+.store__addr { font-size: 14.5px; color: var(--muted); }
+.store__foot { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.store__foot a { font: 600 14px/1 var(--body); }
+.store__foot a:hover { color: var(--muted); }
+
+.live {
+  display: inline-flex; align-items: center; gap: 7px; align-self: flex-start;
+  font: 600 11px/1 var(--body); letter-spacing: .1em; text-transform: uppercase;
+  color: var(--green); background: var(--green-soft); padding: 7px 11px; border-radius: 999px;
+}
+.live i { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+
+/* App CTA */
+.app { text-align: center; }
+.app__badges { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 36px; }
 .badge {
-  display: inline-flex; align-items: center; gap: 11px;
-  height: 56px; padding-inline: 22px;
-  border: 1px solid rgba(255,255,255,.35);
-  border-radius: 9px;
-  color: #fff;
+  display: inline-flex; align-items: center; gap: 12px;
+  height: 58px; padding-inline: 24px;
+  border: 1px solid rgba(255,255,255,.34); border-radius: 10px; color: #fff;
   transition: background .18s ease;
 }
 .badge:hover { background: rgba(255,255,255,.1); }
-.badge svg { flex-shrink: 0; }
 .badge span { display: block; text-align: left; line-height: 1.15; }
-.badge small { display: block; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.65); }
+.badge small { display: block; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.62); }
 .badge b { font: 600 15px/1.2 var(--body); }
-.app__wa { display: inline-block; margin-top: 26px; font-size: 15px; color: rgba(255,255,255,.75); text-decoration: underline; text-underline-offset: 3px; }
+.app__wa { display: inline-block; margin-top: 28px; font-size: 15px; color: rgba(255,255,255,.72); text-decoration: underline; text-underline-offset: 4px; }
 .app__wa:hover { color: #fff; }
+
+/* Quote */
+.quote { border-left: 3px solid var(--ink); padding-left: clamp(22px, 3vw, 40px); }
+.quote p { font-family: var(--display); font-weight: 500; font-size: clamp(22px, 2.8vw, 34px); line-height: 1.28; letter-spacing: -0.03em; text-wrap: pretty; }
+.quote footer { margin-top: 22px; font-size: 15px; color: var(--muted); }
+.quote footer b { display: block; color: var(--ink); font-weight: 600; }
+
+/* Form */
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.field { display: grid; gap: 7px; }
+.field--full { grid-column: 1 / -1; }
+.field label { font: 600 13px/1 var(--body); }
+.field input, .field textarea {
+  height: 50px; padding: 0 15px;
+  border: 1.5px solid var(--line); border-radius: 9px; background: var(--paper);
+  font: 400 15px/1 var(--body); width: 100%;
+  transition: border-color .18s ease;
+}
+.field textarea { height: auto; padding: 14px 15px; min-height: 120px; resize: vertical; line-height: 1.5; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--ink); }
+.field input::placeholder, .field textarea::placeholder { color: var(--faint); }
+.form__note { grid-column: 1 / -1; font-size: 14px; color: var(--muted); }
 
 /* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
-.foot { border-top: 1px solid var(--line); padding-block: clamp(44px, 6vw, 72px) 28px; }
-.foot__top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
-.foot__brand img { height: 26px; width: auto; }
-.foot__mail { display: inline-block; margin-top: 18px; font-size: 15px; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
-.foot__soc { display: flex; gap: 10px; margin-top: 22px; }
-.foot__soc a {
-  width: 38px; height: 38px; display: grid; place-items: center;
-  border: 1px solid var(--line); border-radius: 8px; color: var(--ink);
-  transition: background .18s ease, color .18s ease;
-}
+.foot { border-top: 1px solid var(--line); padding-block: clamp(48px, 6vw, 78px) 30px; }
+.foot__top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 44px; }
+.foot__brand img { height: 27px; width: auto; }
+.foot__blurb { margin-top: 18px; max-width: 34ch; font-size: 15px; color: var(--muted); }
+.foot__mail { display: inline-block; margin-top: 16px; font-size: 15px; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+.foot__mail:hover { border-color: var(--ink); }
+.foot__soc { display: flex; gap: 10px; margin-top: 24px; }
+.foot__soc a { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 9px; transition: background .18s ease, color .18s ease; }
 .foot__soc a:hover { background: var(--ink); color: #fff; }
-.foot__col h4 { font: 600 12px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--faint); margin: 0 0 16px; }
-.foot__col li + li { margin-top: 11px; }
+.foot__col h4 { font: 600 12px/1 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--faint); margin: 0 0 18px; }
+.foot__col li + li { margin-top: 12px; }
 .foot__col a { font-size: 15px; color: var(--muted); }
 .foot__col a:hover { color: var(--ink); }
-.foot__bottom {
-  margin-top: clamp(32px, 4vw, 52px); padding-top: 22px;
-  border-top: 1px solid var(--line);
-  font-size: 13px; color: var(--faint);
-}
-
-/* Live badge — the one place green earns its place */
-.live {
-  display: inline-flex; align-items: center; gap: 7px;
-  font: 600 11px/1 var(--body); letter-spacing: .1em; text-transform: uppercase;
-  color: var(--green); background: var(--green-soft);
-  padding: 7px 11px; border-radius: 999px;
-}
-.live i { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+.foot__bottom { margin-top: clamp(36px, 4vw, 56px); padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--faint); }
 
 /* --------------------------------------------------------------------------
-   Variant switcher (scaffolding, not part of the design)
+   Page header (inner pages)
+   -------------------------------------------------------------------------- */
+.phead { padding-block: clamp(56px, 7vw, 100px) clamp(36px, 4.5vw, 56px); border-bottom: 1px solid var(--line); }
+.phead .h1 { max-width: 18ch; }
+.phead .lead { margin-top: 20px; max-width: 52ch; }
+
+/* --------------------------------------------------------------------------
+   Version switcher (scaffolding)
    -------------------------------------------------------------------------- */
 .vswitch {
   position: sticky; bottom: 0; z-index: 60;
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
   padding: 10px var(--gutter);
-  background: rgba(11,11,12,.94);
+  background: rgba(11,11,12,.95);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   font: 500 13px/1 var(--body); color: rgba(255,255,255,.55);
 }
@@ -282,16 +355,21 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .nav__links, .nav__cta { display: none; }
   .burger { display: flex; }
   .cats { grid-template-columns: repeat(2, 1fr); }
   .why { grid-template-columns: 1fr; }
+  .stores { grid-template-columns: repeat(2, 1fr); }
+  .split, .split--rev .split__media { grid-template-columns: 1fr; order: 0; }
   .foot__top { grid-template-columns: 1fr 1fr; }
   .foot__brand { grid-column: 1 / -1; }
 }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .cats { grid-template-columns: 1fr 1fr; }
+  .stores { grid-template-columns: 1fr; }
+  .statement { grid-template-columns: 1fr; gap: 6px; }
+  .form { grid-template-columns: 1fr; }
   .btn-row .btn { width: 100%; }
   .app__badges .badge { width: 100%; }
 }
