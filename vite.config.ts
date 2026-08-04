@@ -20,7 +20,10 @@ export default defineConfig({
         // Hero explorations — noindex, remove these three once a direction is picked
         heroV1: resolve(__dirname, 'hero-v1/index.html'),
         heroV2: resolve(__dirname, 'hero-v2/index.html'),
-        heroV3: resolve(__dirname, 'hero-v3/index.html')
+        heroV3: resolve(__dirname, 'hero-v3/index.html'),
+
+        // Built strictly to the Website Brief (Bricolage/Jakarta, black-led) — noindex
+        docVer: resolve(__dirname, 'doc-ver/index.html')
       }
     },
     // Copy public assets to dist
