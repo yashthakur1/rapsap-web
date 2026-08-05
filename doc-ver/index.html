@@ -28,7 +28,7 @@
   <body>
     <a class="skip" href="#main">skip to content</a>
 
-    <header class="nav">
+    <header class="nav nav--overlay" data-nav data-stuck="false">
       <div class="wrap nav__in">
         <a class="nav__logo" href="/doc-ver/" aria-label="Rapsap home">
           <img src="/logo.svg" alt="Rapsap" width="124" height="38" />
@@ -57,22 +57,68 @@
     </div>
 
     <main id="main">
-      <!-- HERO — brief: headline, one line, two buttons. Nothing else. -->
-      <section class="hero">
-        <div class="wrap">
-          <h1 class="h1">Your neighbourhood supermarket, done right.</h1>
-          <p class="lead">Shop in-store or get delivered in 10 minutes.</p>
-          <div class="btn-row">
-            <a class="btn btn--fill" href="#app">Order on the App</a>
-            <a class="btn btn--outline" href="https://wa.me/918828136436">Order on WhatsApp</a>
+      <!-- HERO — brief copy fixed; only the photography rotates. -->
+      <section class="chero" aria-label="Rapsap stores">
+        <div class="chero__slides">
+          <div class="chero__slide" data-slide data-active="true">
+            <img src="/store-the-walk.webp" alt="Rapsap storefront at The Walk, Hiranandani Estate" width="1280" height="800" fetchpriority="high" />
+          </div>
+          <div class="chero__slide" data-slide data-active="false">
+            <img src="/store-upper-thane.webp" alt="Inside Rapsap Lodha Upper Thane" width="1280" height="800" loading="lazy" />
+          </div>
+          <div class="chero__slide" data-slide data-active="false">
+            <img src="/store-downtown.webp" alt="Rapsap storefront at Lodha Downtown" width="1280" height="800" loading="lazy" />
+          </div>
+          <div class="chero__slide" data-slide data-active="false">
+            <img src="/store-gold.webp" alt="Rapsap storefront at Lodha Gold" width="1280" height="800" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="wrap chero__body">
+          <h1 class="chero__title">Your neighbourhood supermarket, done right.</h1>
+          <p class="chero__sub">Shop in-store or get delivered in 10 minutes.</p>
+          <div class="chero__cta">
+            <a class="btn btn--onDark" href="#app">Order on the App</a>
+            <a class="btn btn--ghostDark" href="https://wa.me/918828136436">Order on WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="chero__count" aria-hidden="true">
+          <span><b data-current>01</b></span>
+          <span class="chero__rule"><i data-progress style="height:25%"></i></span>
+          <span>04</span>
+        </div>
+
+        <div class="chero__arrows">
+          <button class="chero__arrow" type="button" data-prev aria-label="Previous store">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 1 1 7l6 6M1 7h18"/></svg>
+          </button>
+          <button class="chero__arrow" type="button" data-next aria-label="Next store">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 1l6 6-6 6M19 7H1"/></svg>
+          </button>
+        </div>
+
+        <div class="chero__strip">
+          <div class="wrap chero__strip-in">
+            <button class="chero__tab" type="button" data-tab data-index="0" data-active="true">
+              <b>The Walk — Hiranandani Estate, Thane West</b>
+              <small>View store</small>
+            </button>
+            <button class="chero__tab" type="button" data-tab data-index="1" data-active="false">
+              <b>Lodha Upper Thane — Mankoli, Thane</b>
+              <small>View store</small>
+            </button>
+            <button class="chero__tab" type="button" data-tab data-index="2" data-active="false">
+              <b>Lodha Downtown — Palava City, Kalyan</b>
+              <small>View store</small>
+            </button>
+            <button class="chero__tab" type="button" data-tab data-index="3" data-active="false">
+              <b>Lodha Gold — Kalyan–Shilphata Road</b>
+              <small>View store</small>
+            </button>
           </div>
         </div>
       </section>
-
-      <figure class="showcase">
-        <img src="/store-upper-thane.webp" alt="Inside a Rapsap supermarket — bright, clearly signed aisles" width="1280" height="800" fetchpriority="high" />
-        <figcaption class="showcase__cap"><span>Rapsap Lodha Upper Thane — one of seven live stores across the MMR.</span></figcaption>
-      </figure>
 
       <!-- TOWNSHIP PRESENCE — trust signal, text only -->
       <section class="ticker" aria-label="Township presence">
@@ -246,6 +292,7 @@
     </nav>
 
     <script>
+      // Hamburger
       (function () {
         var b = document.querySelector('[data-burger]'), m = document.querySelector('[data-mnav]');
         if (!b || !m) return;
@@ -254,6 +301,52 @@
           b.setAttribute('aria-expanded', String(open));
           m.setAttribute('data-open', String(open));
         });
+      })();
+
+      // Nav turns solid once the hero is behind it
+      (function () {
+        var nav = document.querySelector('[data-nav]'), hero = document.querySelector('.chero');
+        if (!nav || !hero) return;
+        var set = function () {
+          nav.setAttribute('data-stuck', String(window.scrollY > hero.offsetHeight - 120));
+        };
+        set();
+        window.addEventListener('scroll', set, { passive: true });
+      })();
+
+      // Hero carousel: photography rotates, copy stays put
+      (function () {
+        var slides = [].slice.call(document.querySelectorAll('[data-slide]'));
+        var tabs   = [].slice.call(document.querySelectorAll('[data-tab]'));
+        var cur    = document.querySelector('[data-current]');
+        var prog   = document.querySelector('[data-progress]');
+        if (slides.length < 2) return;
+
+        var i = 0, timer = null;
+        var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function show(n) {
+          i = (n + slides.length) % slides.length;
+          slides.forEach(function (s, k) { s.setAttribute('data-active', String(k === i)); });
+          tabs.forEach(function (t, k) { t.setAttribute('data-active', String(k === i)); });
+          if (cur)  cur.textContent = '0' + (i + 1);
+          if (prog) prog.style.height = ((i + 1) / slides.length * 100) + '%';
+        }
+        function start() { if (!reduced) { stop(); timer = setInterval(function () { show(i + 1); }, 6000); } }
+        function stop()  { if (timer) { clearInterval(timer); timer = null; } }
+
+        document.querySelector('[data-next]').addEventListener('click', function () { show(i + 1); start(); });
+        document.querySelector('[data-prev]').addEventListener('click', function () { show(i - 1); start(); });
+        tabs.forEach(function (t) {
+          t.addEventListener('click', function () { show(+t.dataset.index); start(); });
+        });
+
+        var hero = document.querySelector('.chero');
+        hero.addEventListener('mouseenter', stop);
+        hero.addEventListener('mouseleave', start);
+        hero.addEventListener('focusin', stop);
+
+        show(0); start();
       })();
     </script>
   </body>

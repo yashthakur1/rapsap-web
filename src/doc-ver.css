@@ -183,6 +183,171 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 /* --------------------------------------------------------------------------
+   Carousel hero — full-bleed photography, nav overlaid, oversized headline,
+   slide counter and a bottom strip naming the store on screen.
+   Headline copy stays fixed per the brief; only the photography rotates.
+   -------------------------------------------------------------------------- */
+.chero {
+  position: relative;
+  min-height: min(90svh, 760px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: var(--ink);
+  isolation: isolate;
+}
+
+.chero__slides { position: absolute; inset: 0; z-index: -2; }
+.chero__slide {
+  position: absolute; inset: 0;
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+.chero__slide[data-active='true'] { opacity: 1; }
+.chero__slide img { width: 100%; height: 100%; object-fit: cover; }
+
+.chero::after {
+  content: '';
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(to right, rgba(11,11,12,.82) 0%, rgba(11,11,12,.42) 52%, rgba(11,11,12,.28) 100%),
+    linear-gradient(to top, rgba(11,11,12,.72) 0%, transparent 46%);
+}
+
+.chero__body { padding-block: clamp(104px, 11vw, 128px) clamp(132px, 14vw, 158px); }
+.chero__title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(38px, 4.7vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  color: #fff;
+  max-width: 15ch;
+}
+.chero__sub {
+  margin-top: clamp(18px, 2.4vw, 28px);
+  font: 400 clamp(17px, 1.7vw, 21px)/1.5 var(--body);
+  color: rgba(255,255,255,.86);
+  max-width: 42ch;
+}
+.chero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(26px, 3.4vw, 40px); }
+
+/* slide counter + progress rule, right edge */
+.chero__count {
+  position: absolute;
+  right: clamp(18px, 3vw, 46px);
+  top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  font: 600 12px/1 var(--body);
+  color: rgba(255,255,255,.7);
+  letter-spacing: .1em;
+  z-index: 3;
+}
+.chero__count b { color: #fff; font-weight: 700; }
+.chero__rule { width: 1px; height: clamp(70px, 12vw, 130px); background: rgba(255,255,255,.28); position: relative; }
+.chero__rule i {
+  position: absolute; left: 0; top: 0; width: 1px; background: #fff;
+  transition: height 500ms ease;
+}
+
+/* arrow controls */
+.chero__arrows {
+  position: absolute;
+  right: 0;
+  bottom: clamp(96px, 14vw, 132px);
+  display: flex;
+  z-index: 3;
+}
+.chero__arrow {
+  width: clamp(48px, 5vw, 58px); height: clamp(48px, 5vw, 58px);
+  display: grid; place-items: center;
+  background: var(--blue); color: #fff;
+  transition: background .18s ease;
+}
+.chero__arrow:hover { background: #3B61E6; }
+.chero__arrow + .chero__arrow { border-left: 1px solid rgba(255,255,255,.28); }
+
+/* bottom strip — the slide labels */
+.chero__strip {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  z-index: 3;
+  background: var(--paper);
+}
+.chero__strip-in { display: grid; grid-template-columns: repeat(4, 1fr); }
+.chero__tab {
+  text-align: left;
+  padding: clamp(18px, 2.2vw, 26px) clamp(16px, 2vw, 26px);
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+  transition: color .18s ease, background .18s ease;
+}
+.chero__tab:first-child { border-left: 0; }
+.chero__tab:hover { background: var(--paper-2); color: var(--ink); }
+.chero__tab b {
+  display: block;
+  font: 600 clamp(12px, 1.15vw, 14px)/1.35 var(--body);
+  letter-spacing: .01em;
+}
+.chero__tab small {
+  display: block; margin-top: 8px;
+  font: 600 10px/1 var(--body); letter-spacing: .14em; text-transform: uppercase;
+  color: transparent;
+}
+.chero__tab[data-active='true'] { color: var(--blue); background: var(--paper); }
+.chero__tab[data-active='true'] b { color: var(--blue); }
+.chero__tab[data-active='true'] small { color: var(--faint); }
+
+@media (prefers-reduced-motion: reduce) {
+  .chero__slide { transition: none; }
+  .chero__rule i { transition: none; }
+}
+
+@media (max-width: 900px) {
+  .chero { min-height: 0; }
+  .chero__body { padding-block: clamp(120px, 26vw, 180px) clamp(190px, 40vw, 240px); }
+  .chero__count { display: none; }
+  .chero__strip-in { grid-template-columns: repeat(2, 1fr); }
+  .chero__tab:nth-child(3) { border-left: 0; }
+  .chero__tab { border-top: 1px solid var(--line); }
+  .chero__tab:nth-child(-n+2) { border-top: 0; }
+  .chero__arrows { bottom: auto; top: clamp(88px, 20vw, 120px); }
+}
+
+/* nav overlay variant — sits on the hero image until scrolled */
+.nav--overlay {
+  position: fixed; left: 0; right: 0; top: 0;
+  background: transparent;
+  border-bottom-color: transparent;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+.nav--overlay .nav__links a,
+.nav--overlay .nav__logo { color: #fff; }
+.nav--overlay .nav__logo img { filter: brightness(0) invert(1); }
+.nav--overlay .btn--outline { border-color: rgba(255,255,255,.6); color: #fff; }
+.nav--overlay .btn--outline:hover { background: #fff; color: var(--ink); }
+.nav--overlay .btn--fill { background: #fff; color: var(--ink); }
+.nav--overlay .btn--fill:hover { background: #E9E9E5; }
+.nav--overlay .burger span,
+.nav--overlay .burger span::before,
+.nav--overlay .burger span::after { background: #fff; }
+
+.nav--overlay[data-stuck='true'] {
+  background: rgba(255,255,255,.94);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-bottom-color: var(--line);
+}
+.nav--overlay[data-stuck='true'] .nav__links a,
+.nav--overlay[data-stuck='true'] .nav__logo { color: var(--ink); }
+.nav--overlay[data-stuck='true'] .nav__logo img { filter: none; }
+.nav--overlay[data-stuck='true'] .btn--outline { border-color: var(--ink); color: var(--ink); }
+.nav--overlay[data-stuck='true'] .btn--outline:hover { background: var(--ink); color: #fff; }
+.nav--overlay[data-stuck='true'] .btn--fill { background: var(--ink); color: #fff; }
+.nav--overlay[data-stuck='true'] .burger span,
+.nav--overlay[data-stuck='true'] .burger span::before,
+.nav--overlay[data-stuck='true'] .burger span::after { background: var(--ink); }
+
+/* --------------------------------------------------------------------------
    Township presence — a continuous ticker on the brand blue band.
    One transform animation on a duplicated track; pauses on hover and is
    switched off entirely under prefers-reduced-motion.
