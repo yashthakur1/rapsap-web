@@ -5,12 +5,14 @@
 
    Brief constraints honoured:
      · Black is the brand. Green is accent only, sparingly.
-     · Bricolage Grotesque headlines, Plus Jakarta Sans body.
+     · Fonts: the live rapsap.com pairing (Barlow Condensed + DM Sans),
+       overriding the brief's Bricolage/Jakarta at the client's request.
      · No animations or heavy effects.
      · Hero: headline, one line, two buttons. No stats, no store count.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,500;12..96,75..100,600;12..96,75..100,700;12..96,75..100,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+/* Official rapsap.com pairing: Barlow Condensed display + DM Sans body */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
 
 :root {
   --ink:        #0B0B0C;
@@ -26,8 +28,9 @@
   --green:      #03926E;
   --green-soft: #E8F4F0;
 
-  --display: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
-  --body:    'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --display: 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --body:    'DM Sans', system-ui, -apple-system, sans-serif;
+  --blue:    #5074F3;   /* brand blue — ticker band */
 
   --wrap: 1180px;
   --gutter: 24px;
@@ -62,30 +65,30 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .skip:focus { left: 0; }
 
 /* --------------------------------------------------------------------------
-   Type — Bricolage Grotesque carries the personality; tight, confident.
+   Type — Barlow Condensed carries the personality; tight, confident.
    -------------------------------------------------------------------------- */
 .h1 {
   font-family: var(--display);
-  font-weight: 700; font-variation-settings: 'wdth' 96;
-  font-size: clamp(42px, 6.4vw, 82px);
-  line-height: 1.0;
-  letter-spacing: -0.04em;
+  font-weight: 800;
+  font-size: clamp(48px, 7.6vw, 104px);
+  line-height: 0.94;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 .h2 {
   font-family: var(--display);
-  font-weight: 700; font-variation-settings: 'wdth' 96;
-  font-size: clamp(30px, 4vw, 52px);
-  line-height: 1.06;
-  letter-spacing: -0.035em;
+  font-weight: 800;
+  font-size: clamp(34px, 4.8vw, 64px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
   text-wrap: balance;
 }
 .h3 {
   font-family: var(--display);
-  font-weight: 600;
-  font-size: clamp(19px, 1.6vw, 23px);
-  line-height: 1.22;
-  letter-spacing: -0.022em;
+  font-weight: 700;
+  font-size: clamp(21px, 1.9vw, 27px);
+  line-height: 1.14;
+  letter-spacing: -0.012em;
 }
 .h4 { font: 600 17px/1.3 var(--body); letter-spacing: -0.01em; }
 
@@ -180,16 +183,52 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 /* --------------------------------------------------------------------------
-   Township presence — trust signal, text only
+   Township presence — a continuous ticker on the brand blue band.
+   One transform animation on a duplicated track; pauses on hover and is
+   switched off entirely under prefers-reduced-motion.
    -------------------------------------------------------------------------- */
-.township { border-bottom: 1px solid var(--line); padding-block: clamp(36px, 4.5vw, 56px); background: var(--paper); }
-.township__line { font-size: 15px; color: var(--muted); }
-.township__row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; margin-top: 18px; }
-.township__row span {
-  font-family: var(--display); font-weight: 600;
-  font-size: clamp(18px, 2.2vw, 26px); letter-spacing: -0.025em;
+.ticker {
+  background: var(--blue);
+  color: #fff;
+  overflow: hidden;
+  padding-block: clamp(16px, 2vw, 22px);
+  border-block: 1px solid rgba(255,255,255,.14);
 }
-.township__row i { color: var(--line); font-style: normal; font-size: 20px; }
+.ticker__track {
+  display: flex;
+  width: max-content;
+  animation: ticker-run 42s linear infinite;
+  will-change: transform;
+}
+.ticker:hover .ticker__track,
+.ticker:focus-within .ticker__track { animation-play-state: paused; }
+
+.ticker__group {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 40px);
+  padding-right: clamp(20px, 3vw, 40px);
+  white-space: nowrap;
+}
+.ticker__lead {
+  font: 500 clamp(14px, 1.4vw, 16px)/1 var(--body);
+  color: rgba(255,255,255,.82);
+}
+.ticker__name {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(22px, 2.6vw, 32px);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.ticker__dot { color: rgba(255,255,255,.42); font-size: 18px; line-height: 1; }
+
+@keyframes ticker-run { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track { animation: none; flex-wrap: wrap; width: 100%; padding-inline: var(--gutter); }
+  .ticker__group:nth-child(2) { display: none; }
+}
 
 /* --------------------------------------------------------------------------
    Sections
@@ -246,7 +285,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .statements { display: grid; gap: 0; margin-top: 8px; }
 .statement { display: grid; grid-template-columns: 210px 1fr; gap: clamp(20px, 4vw, 48px); padding-block: clamp(24px, 3vw, 34px); border-top: 1px solid var(--line); align-items: start; }
 .statement:last-child { border-bottom: 1px solid var(--line); }
-.statement__k { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.4vw, 30px); letter-spacing: -0.03em; }
+.statement__k { font-family: var(--display); font-weight: 800; font-size: clamp(26px, 2.9vw, 36px); letter-spacing: -0.012em; }
 .statement__v { color: var(--muted); font-size: 16.5px; }
 
 /* Store cards — name, community, address, phone, directions, live badge */
@@ -258,7 +297,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .store__media { aspect-ratio: 16/10; background: var(--paper-2); }
 .store__media img { width: 100%; height: 100%; object-fit: cover; }
 .store__body { padding: 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-.store__name { font-family: var(--display); font-weight: 700; font-size: 21px; letter-spacing: -0.028em; line-height: 1.15; }
+.store__name { font-family: var(--display); font-weight: 800; font-size: 25px; letter-spacing: -0.012em; line-height: 1.15; }
 .store__dev { font: 600 12px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
 .store__addr { font-size: 14.5px; color: var(--muted); }
 .store__foot { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
@@ -290,7 +329,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* Quote */
 .quote { border-left: 3px solid var(--ink); padding-left: clamp(22px, 3vw, 40px); }
-.quote p { font-family: var(--display); font-weight: 500; font-size: clamp(22px, 2.8vw, 34px); line-height: 1.28; letter-spacing: -0.03em; text-wrap: pretty; }
+.quote p { font-family: var(--display); font-weight: 600; font-size: clamp(26px, 3.4vw, 44px); line-height: 1.14; letter-spacing: -0.015em; text-wrap: pretty; }
 .quote footer { margin-top: 22px; font-size: 15px; color: var(--muted); }
 .quote footer b { display: block; color: var(--ink); font-weight: 600; }
 
