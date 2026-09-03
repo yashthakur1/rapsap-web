@@ -14,7 +14,8 @@ export default defineConfig({
         privacy: resolve(__dirname, 'privacy-policy.html'),
         terms: resolve(__dirname, 'terms-conditions.html'),
         shipping: resolve(__dirname, 'shipping-policy.html'),
-        refund: resolve(__dirname, 'refund-policy.html')
+        refund: resolve(__dirname, 'refund-policy.html'),
+        googleHtml: resolve(__dirname, 'google7694cf04bb5ce287.html'),
       }
     },
     // Copy public assets to dist
