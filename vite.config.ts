@@ -30,7 +30,10 @@ export default defineConfig({
 
         // The earlier dark direction (grid overlay + italic display) — noindex.
         // Recovered from .backup-predesign; it was never committed.
-        darkVer: resolve(__dirname, 'dark-ver/index.html')
+        darkVer: resolve(__dirname, 'dark-ver/index.html'),
+
+        // v4 rethink — built from rapsap_website_rethink_v4.html — noindex
+        v4Ver: resolve(__dirname, 'v4/index.html')
       }
     },
     // Copy public assets to dist
