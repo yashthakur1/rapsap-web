@@ -147,3 +147,30 @@
     location.href = `mailto:care@rapsap.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 })();
+
+/* ---- App animation (home) ----------------------------------------------
+   lottie-web is ~60 KB and the animation JSON is 2 MB, so neither is
+   fetched until the section is within a screen of the viewport. Reduced
+   motion keeps the photo. */
+(function () {
+  const box = document.querySelector('[data-lottie]');
+  if (!box) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const start = () => {
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+    s.onload = () => {
+      const anim = window.lottie.loadAnimation({
+        container: box, renderer: 'svg', loop: true, autoplay: true, path: box.dataset.lottie,
+        rendererSettings: { preserveAspectRatio: 'xMidYMid meet' },
+      });
+      anim.addEventListener('DOMLoaded', () => box.classList.add('loaded'));
+    };
+    document.head.appendChild(s);
+  };
+  if (!('IntersectionObserver' in window)) return start();
+  const io = new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) { io.disconnect(); start(); }
+  }, { rootMargin: '100% 0px' });
+  io.observe(box);
+})();
