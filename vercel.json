@@ -1,15 +1,129 @@
 {
   "redirects": [
-    { "source": "/stores.html", "destination": "/stores/", "permanent": true },
-    { "source": "/about.html", "destination": "/about/", "permanent": true },
-    { "source": "/franchise.html", "destination": "/partners/", "permanent": true },
-    { "source": "/privacy-policy.html", "destination": "/privacy-policy/", "permanent": true },
-    { "source": "/terms-conditions.html", "destination": "/terms-conditions/", "permanent": true },
-    { "source": "/shipping-policy.html", "destination": "/shipping-policy/", "permanent": true },
-    { "source": "/refund-policy.html", "destination": "/refund-policy/", "permanent": true },
-    { "source": "/contact-us-policy.html", "destination": "/contact/", "permanent": true },
-    { "source": "/v4", "destination": "/", "permanent": false },
-    { "source": "/v4/", "destination": "/", "permanent": false },
-    { "source": "/(doc-ver|dark-ver|hero-v1|hero-v2|hero-v3)/:path*", "destination": "/", "permanent": false }
+    {
+      "source": "/stores.html",
+      "destination": "/stores/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/franchise.html",
+      "destination": "/partners/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/terms-conditions.html",
+      "destination": "/terms-conditions/",
+      "permanent": true
+    },
+    {
+      "source": "/shipping-policy.html",
+      "destination": "/shipping-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/refund-policy.html",
+      "destination": "/refund-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us-policy.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/v4",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/v4/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/doc-ver",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/doc-ver/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/doc-ver/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/dark-ver",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/dark-ver/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/dark-ver/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/hero-v1",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/hero-v1/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/hero-v1/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/hero-v2",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/hero-v2/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/hero-v2/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/hero-v3",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/hero-v3/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/hero-v3/:path*",
+      "destination": "/",
+      "permanent": false
+    }
   ]
 }
