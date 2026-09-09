@@ -175,13 +175,26 @@
 }
 
 /* --------------------------------------------------------------------------
-   Dual block: two photo panels, one per way of shopping. The comp's tap
-   panel carried a mock phone UI in a half-width column; the app now has a
-   section of its own below, so this panel just states the second way.
+   Dual block. Two different treatments on purpose: walk-in is the clean
+   storefront under a gradient with white type; tap-in is a paper panel
+   with ink type and the brand mark as texture. Real store photographs are
+   snapshots — right at card size on /stores/, wrong at 700px under
+   display type — so the walk panel uses the supplied storefront asset.
+   The type is a size down from the comp's: at half width, 100px wrapped
+   to one word a line.
    -------------------------------------------------------------------------- */
-.mode{min-height:640px}
-.mode.tap{background:linear-gradient(180deg,rgba(0,0,0,.10),rgba(0,0,0,.72)),url('/delivery.webp') center 30%/cover;color:#fff}
+.mode{min-height:600px;padding:40px}
+.mode h3{font-size:clamp(40px,4.2vw,64px);line-height:.92;letter-spacing:-.05em;margin:0 0 16px}
+.mode p{font-size:18px;max-width:420px}
+.mode.walk{background-image:linear-gradient(180deg,rgba(0,0,0,.14) 0%,rgba(0,0,0,.28) 45%,rgba(0,0,0,.78) 100%),url('/storefront.webp');background-position:center 40%}
+.mode.tap{background:#f0eee8;color:var(--ink)}
+.mode.tap p{color:#4d514d;opacity:1}
+.mode.tap .mode-label{color:var(--blue);opacity:1}
+.mode.tap .mark{position:absolute;right:-6%;bottom:-14%;width:46%;height:auto;opacity:.06;pointer-events:none}
+.mode.tap > div{position:relative}
 .mode .btn{width:max-content}
+.mode.tap .btn{border-color:var(--ink);color:var(--ink);background:transparent}
+.mode.tap .btn:hover{background:var(--ink);color:#fff}
 
 /* --------------------------------------------------------------------------
    The app. A photo with a caption chip, and the four steps as a numbered
