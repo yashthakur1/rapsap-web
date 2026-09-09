@@ -46,6 +46,106 @@
 @media(max-width:560px){.hero::after{background:radial-gradient(120% 58% at 50% 92%,rgba(0,0,0,.32) 0%,rgba(0,0,0,0) 80%)}}
 
 /* --------------------------------------------------------------------------
+   Site sections — what the guideline comp didn't carry.
+   The comp was a design language, not a page: it had no stores, no
+   pharmacy, no township story, a rendered storefront and a fabricated
+   brand rail. These rules add the real Rapsap in the same dialect — same
+   tokens, same type scale, same 28px radii, single-line rules like the
+   guideline's — so nothing here reads as a second stylesheet.
+   -------------------------------------------------------------------------- */
+
+/* nav: five real links + CTA is wider than the comp's three */
+.navlinks{gap:24px}
+
+/* the walk-in panel shows a real storefront (Lodha Downtown — the cleanest
+   signage of the seven), not the render. The Walk's photo has the rapsap
+   sign in its lower half under a restaurant's, so it stays a store card. */
+.mode.walk{background-image:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.70)),url('/store-downtown.webp');background-position:0% 45%}
+
+/* stat strip under the intro */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:1px solid var(--line);margin-top:70px;padding-top:28px}
+.stat b{display:block;font-size:clamp(34px,3.4vw,54px);line-height:1;letter-spacing:-.05em;font-weight:760}
+.stat span{display:block;margin-top:10px;font-size:14px;color:var(--muted);font-weight:650}
+
+/* the brief's eight categories, inside story row 04 */
+.cats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:24px 0 28px;max-width:470px}
+.cats-grid .cat{background:#fff;border:1px solid var(--line);min-height:84px}
+
+/* township ticker — the real story where the brand rail was */
+.township{background:var(--blue);color:#fff;padding:64px 0 0;overflow:hidden}
+.township-head{display:flex;justify-content:space-between;align-items:end;gap:40px;padding-bottom:40px}
+.township-head h2{font-size:clamp(42px,4.6vw,74px);margin:0;letter-spacing:-.05em;line-height:.96;max-width:760px;font-weight:740}
+.township-head p{max-width:420px;color:rgba(255,255,255,.82);font-size:17px;line-height:1.55;margin:0}
+.township-rail{border-top:1px solid rgba(255,255,255,.28);padding:26px 0;overflow:hidden}
+.township-rail .ticker{font-size:clamp(28px,3.4vw,54px);font-weight:700;letter-spacing:-.045em;gap:60px;animation-duration:34s}
+.township-rail .ticker span::after{color:rgba(255,255,255,.55);margin-left:60px}
+
+/* stores */
+.stores{padding:120px 0 110px}
+.stores-head{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:end;margin-bottom:54px}
+.stores-head h2{font-size:clamp(46px,5vw,82px);line-height:.96;letter-spacing:-.055em;margin:0;font-weight:740}
+.stores-head p{font-size:19px;line-height:1.55;color:#4d514d;margin:0 0 20px;max-width:480px}
+.store-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.scard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden}
+.scard-photo{aspect-ratio:16/10;overflow:hidden}
+.scard-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.scard:hover .scard-photo img{transform:scale(1.04)}
+.scard-body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.scard .chapter{font-size:12px}
+.scard h3{font-size:26px;line-height:1;letter-spacing:-.045em;margin:4px 0 2px;font-weight:750}
+.scard address{font-style:normal;font-size:15px;line-height:1.5;color:var(--muted)}
+.scard-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:700;color:#4d514d;margin-top:auto;padding-top:14px}
+.scard-links{display:flex;gap:18px;font-size:14px;font-weight:750;margin-top:8px}
+.scard-links a{color:var(--blue)}
+.scard-links a:hover{text-decoration:underline}
+
+/* loyal: the membership card replaces the receipt; the maths sits under the grid.
+   On the comp's blue field a blue card would vanish, so the card is ink with
+   the rate in the comp's own gold — a black card reads as the premium tier. */
+/* overflow:hidden clips the confetti canvas (which overhangs the stage by design) at the section edge, not the page's */
+.loyal{overflow:hidden}
+.cardstage{position:relative;display:grid;place-items:center;perspective:1100px;padding:24px 0}
+.cardstage::before{content:'';position:absolute;left:50%;top:50%;width:100%;aspect-ratio:1.7/1;transform:translate(-50%,-46%);background:radial-gradient(closest-side,rgba(0,0,0,.30),transparent 74%);filter:blur(12px);pointer-events:none}
+.loyalcard{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-between;gap:16px;width:min(100%,420px);aspect-ratio:1.586/1;padding:clamp(20px,4.5%,28px);text-align:left;border:0;border-radius:20px;cursor:pointer;overflow:hidden;isolation:isolate;color:#fff;background:radial-gradient(120% 100% at 12% 0%,#2c302e 0%,transparent 55%),linear-gradient(152deg,#1b1e1c 0%,#0b0d0c 52%,#000 100%);box-shadow:0 2px 4px rgba(0,0,0,.2),0 30px 70px -18px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.14);transform-style:preserve-3d;transition:box-shadow .5s cubic-bezier(.16,1,.3,1);will-change:transform}
+.loyalcard:focus-visible{outline:none;box-shadow:0 0 0 3px #fff,0 0 0 6px var(--ink),0 24px 50px -14px rgba(0,0,0,.5)}
+.loyalcard__sheen{position:absolute;inset:-40%;z-index:2;pointer-events:none;opacity:0;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.28) 47%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.28) 53%,transparent 62%);transform:translateX(var(--sheen,0%));transition:opacity .3s;mix-blend-mode:overlay}
+.loyalcard:hover .loyalcard__sheen,.loyalcard:focus-visible .loyalcard__sheen{opacity:1}
+.loyalcard__mark{position:absolute;right:-8%;bottom:-26%;width:58%;height:auto;z-index:0;opacity:.09;pointer-events:none}
+.loyalcard__row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;position:relative;z-index:3}
+.loyalcard__row--bottom{align-items:flex-end}
+.loyalcard__brand{font-size:clamp(17px,4.6%,21px);font-weight:750;letter-spacing:-.02em}
+.loyalcard__brand b{font-weight:500;opacity:.7}
+.loyalcard__rate{font-size:clamp(30px,8%,40px);font-weight:820;letter-spacing:-.05em;line-height:1;color:var(--gold)}
+.loyalcard__num{position:relative;z-index:3;font-size:clamp(13px,3.6%,16px);letter-spacing:.14em;color:rgba(255,255,255,.78);font-variant-numeric:tabular-nums}
+.loyalcard__field{display:flex;flex-direction:column;gap:5px;font-size:clamp(12px,3.2%,14px);line-height:1.1;font-weight:600}
+.loyalcard__field small{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.loyalcard__field--end{text-align:right}
+/* the burst overflows the stage on purpose — clipped to the card it would vanish in a few frames */
+.confetti{position:absolute;inset:-110px -90px;width:calc(100% + 180px);height:calc(100% + 220px);z-index:4;pointer-events:none}
+.cardstage__hint{margin-top:8px;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.6);transition:opacity .5s}
+.cardstage__hint[data-spent='true']{opacity:0}
+.maths{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:18px;align-items:center;margin-top:70px;background:#fff;color:var(--ink);border-radius:6px;padding:30px 38px;box-shadow:0 35px 90px rgba(0,0,0,.18)}
+.maths-arrow{font-size:28px;color:#bbb}
+.maths span{display:block;font-size:13px;color:#777;font-weight:650}
+.maths strong{display:block;font-size:clamp(34px,3.6vw,54px);letter-spacing:-.06em;line-height:1.05;margin-top:6px}
+.maths .keep strong{color:var(--blue)}
+
+/* footer: real links, socials, the legal line */
+.foot{align-items:flex-start}
+.foot-brand p{margin:14px 0 0;max-width:340px;font-size:14px;line-height:1.55;color:var(--muted)}
+.foot-brand a{color:var(--ink);font-weight:700}
+.foot-cols{display:flex;gap:56px;flex-wrap:wrap}
+.foot-col{display:flex;flex-direction:column;gap:10px;font-size:13px;color:#6d706d}
+.foot-col strong{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:4px}
+.foot-col a:hover{color:var(--ink)}
+.legal{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:40px;padding-top:22px;font-size:12px;color:#8a8d8a}
+
+@media(max-width:1100px){.store-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.stores{padding:90px 0 80px}.stores-head{grid-template-columns:1fr;gap:20px}.township-head{display:block}.township-head p{margin-top:16px}.maths{grid-template-columns:1fr;gap:14px;padding:26px}.maths-arrow{display:none}.foot-cols{gap:32px}.confetti{inset:-90px 0;width:100%;height:calc(100% + 180px)}}
+@media(max-width:560px){.store-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr;gap:18px}.cats-grid{max-width:none}}
+@media(hover:none){.cardstage__hint{display:none}.loyalcard{cursor:default}}
+
+/* --------------------------------------------------------------------------
    Version switcher (scaffolding — not part of this design)
    -------------------------------------------------------------------------- */
 .vswitch-v4{position:sticky;bottom:0;z-index:999;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 24px;background:rgba(11,13,12,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:650 13px/1 "DM Sans",sans-serif;color:rgba(255,255,255,.55);border-top:1px solid rgba(255,255,255,.12)}
