@@ -14,7 +14,12 @@
       "Bash(sed:*)",
       "Bash(for:*)",
       "Bash(do)",
-      "Bash(done)"
+      "Bash(done)",
+      "mcp__workbase__get_task_details",
+      "mcp__workbase__get_project_context",
+      "mcp__workbase__update_progress",
+      "mcp__workbase__complete_task",
+      "mcp__workbase__list_assigned_tasks"
     ],
     "deny": [],
     "ask": [],
