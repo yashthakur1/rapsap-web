@@ -26,6 +26,26 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker{animation:none}}
 
 /* --------------------------------------------------------------------------
+   Hero: left alignment + text scrim
+   The guideline caps .hero-content at 720px, and .wrap's auto margins then
+   centre that block, so the copy floats mid-frame while every other section
+   starts at the page gutter. Dropping the cap puts the hero on the same left
+   edge as the nav and the sections below; h1 breaks on explicit <br> and
+   .hero-copy keeps its own 520px measure, so nothing reflows.
+
+   The scrim is a soft ellipse anchored bottom-left, sitting above .hero-bg
+   (z-index auto) and below .hero-content (z-index 2). It darkens only the
+   quadrant the type sits in and fades out by ~65% across, leaving the
+   produce on the right at full brightness.
+   -------------------------------------------------------------------------- */
+.hero-content{max-width:none}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(75% 95% at 0% 68%,rgba(0,0,0,.62) 0%,rgba(0,0,0,.46) 32%,rgba(0,0,0,.18) 58%,rgba(0,0,0,0) 78%)}
+
+/* Narrow screens already get a full-width vertical fade from .hero-bg, so the
+   scrim only needs to lift the very bottom rather than a corner. */
+@media(max-width:560px){.hero::after{background:radial-gradient(120% 58% at 50% 92%,rgba(0,0,0,.32) 0%,rgba(0,0,0,0) 80%)}}
+
+/* --------------------------------------------------------------------------
    Version switcher (scaffolding — not part of this design)
    -------------------------------------------------------------------------- */
 .vswitch-v4{position:sticky;bottom:0;z-index:999;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 24px;background:rgba(11,13,12,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:650 13px/1 "DM Sans",sans-serif;color:rgba(255,255,255,.55);border-top:1px solid rgba(255,255,255,.12)}
