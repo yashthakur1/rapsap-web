@@ -156,6 +156,16 @@
 @media(hover:none){.cardstage__hint{display:none}.loyalcard{cursor:default}}
 
 /* --------------------------------------------------------------------------
+   Hero as a card. The comp ran it full-bleed; inset it to the same edge as
+   the nav pill and give it the story-photo radius, so the page opens on a
+   tile rather than a wall. The photo, scrim and ticker are all absolutely
+   positioned inside .hero, so overflow:hidden clips them to the corners.
+   -------------------------------------------------------------------------- */
+.hero{margin:12px 12px 0;border-radius:32px;height:calc(100svh - 12px);min-height:700px}
+.hero-bottom{border-bottom-left-radius:32px;border-bottom-right-radius:32px}
+@media(max-width:900px){.hero{margin:10px 10px 0;border-radius:24px;height:calc(100svh - 10px);min-height:640px}.hero-bottom{border-bottom-left-radius:24px;border-bottom-right-radius:24px}}
+
+/* --------------------------------------------------------------------------
    Nav on narrow screens. The comp simply hides the links under 900px; a
    real site needs them, so the pill grows a toggle and the links drop into
    a panel under it.
